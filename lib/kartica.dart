@@ -84,14 +84,49 @@ class _OrderKarticaState extends State<OrderKartica> {
                   SizedBox(
                     height: SizeConfig.safeBlockVertical * 2,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      Text(
-                        widget.cijena,
-                      ),
-                    ],
-                  )
+                  !imaSlike
+                      ? Row(
+                          mainAxisAlignment: !imaSlike
+                              ? MainAxisAlignment.end
+                              : MainAxisAlignment.start,
+                          children: <Widget>[
+                            Column(
+                              children: <Widget>[Text("Test")],
+                            ),
+                            Column(
+                              children: <Widget>[
+                                SizedBox(
+                                    width: SizeConfig.safeBlockHorizontal * 3)
+                              ],
+                            ),
+                            Column(
+                              children: <Widget>[Text("Test2")],
+                            ),
+                            Column(
+                              children: <Widget>[
+                                SizedBox(
+                                    width: SizeConfig.safeBlockHorizontal * 3)
+                              ],
+                            ),
+                            Column(children: <Widget>[
+                              Text(
+                                widget.cijena,
+                              ),
+                            ]),
+                          ],
+                        )
+                      : Row(
+                          mainAxisAlignment: !imaSlike
+                              ? MainAxisAlignment.end
+                              : MainAxisAlignment.start,
+                          children: <Widget>[
+                            Column(children: <Widget>[
+                              Text(
+                                widget.cijena,
+                              ),
+                            ]),
+                          ],
+                        )
                 ],
               ),
       ),
