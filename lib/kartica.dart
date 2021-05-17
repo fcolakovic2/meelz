@@ -22,7 +22,7 @@ class _OrderKarticaState extends State<OrderKartica> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
-        child: imaSlike
+        child: !imaSlike
             ? Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
@@ -65,7 +65,12 @@ class _OrderKarticaState extends State<OrderKartica> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Column(children: <Widget>[
-                        Image.asset(widget.image),
+                        Container(
+                          height: SizeConfig.safeBlockVertical * 15,
+                          width: SizeConfig.safeBlockHorizontal * 15,
+                          child: Image.network(
+                              'https://github.com/flutter/plugins/raw/master/packages/video_player/video_player/doc/demo_ipod.gif?raw=true'),
+                        )
                       ]),
                       Column(children: <Widget>[
                         Text(
