@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-TextStyle AppBarText = TextStyle(
+TextStyle appBarText = TextStyle(
   fontSize: 26,
   fontWeight: FontWeight.w500,
   fontFamily: "Averta",

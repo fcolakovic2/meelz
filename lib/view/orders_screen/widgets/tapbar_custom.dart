@@ -9,7 +9,6 @@ class TapBarCustom extends StatefulWidget {
 class _TapBarCustomState extends State<TapBarCustom> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -18,10 +17,11 @@ class _TapBarCustomState extends State<TapBarCustom> {
     return Align(
       alignment: Alignment.centerLeft,
       child: Padding(
-        padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+        padding: const EdgeInsets.only(left: 25.0, right: 25.0),
         child: Container(
           width: MediaQuery.of(context).size.width / 1.2,
           child: TabBar(
+            isScrollable: true,
             onTap: (value) {
               setState(() {
                 indexPage = value;
@@ -33,28 +33,38 @@ class _TapBarCustomState extends State<TapBarCustom> {
                 color: Colors.amberAccent,
               ),
               insets: EdgeInsets.only(
-                right: MediaQuery.of(context).size.width * 0.13,
+                // left: ,
+                right: MediaQuery.of(context).size.width * 0.185,
               ),
             ),
             labelPadding: EdgeInsets.symmetric(vertical: 15.0),
-            indicatorSize: TabBarIndicatorSize.label,
+            // indicatorSize: TabBarIndicatorSize.label,
             tabs: [
-              Text(
-                "ALL ORDERS",
-                style: TextStyle(
-                  color: indexPage == 0 ? Colors.black : Colors.grey,
+              Container(
+                width: 100,
+                child: Text(
+                  "ALL ORDERS",
+                  style: TextStyle(
+                    color: indexPage == 0 ? Colors.black : Colors.grey,
+                  ),
                 ),
               ),
-              Text(
-                "PENDING   ",
-                style: TextStyle(
-                  color: indexPage == 1 ? Colors.black : Colors.grey,
+              Container(
+                width: 100,
+                child: Text(
+                  "PENDING   ",
+                  style: TextStyle(
+                    color: indexPage == 1 ? Colors.black : Colors.grey,
+                  ),
                 ),
               ),
-              Text(
-                "SHIPPED   ",
-                style: TextStyle(
-                  color: indexPage == 2 ? Colors.black : Colors.grey,
+              Container(
+                width: 100,
+                child: Text(
+                  "SHIPPED   ",
+                  style: TextStyle(
+                    color: indexPage == 2 ? Colors.black : Colors.grey,
+                  ),
                 ),
               ),
             ],

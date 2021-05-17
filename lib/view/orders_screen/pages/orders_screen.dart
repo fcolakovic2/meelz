@@ -9,7 +9,6 @@ class OrdersScreen extends StatefulWidget {
 class _OrdersScreenState extends State<OrdersScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -20,10 +19,10 @@ class _OrdersScreenState extends State<OrdersScreen> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          elevation: 0.0,
+          elevation: 0.5,
           backgroundColor: Colors.white,
           bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(80.0),
+            preferredSize: const Size.fromHeight(60.0),
             child: TapBarCustom(),
           ),
           title: Text(
