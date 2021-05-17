@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/SizeConfig.dart';
 
 class OrderKartica extends StatefulWidget {
   String title, subtitle, cijena, image;
@@ -11,8 +12,13 @@ class OrderKartica extends StatefulWidget {
 class _OrderKarticaState extends State<OrderKartica> {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return Center(
       child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -24,6 +30,9 @@ class _OrderKarticaState extends State<OrderKartica> {
                 ),
               ],
             ),
+            SizedBox(
+              height: SizeConfig.safeBlockVertical * 2,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -32,12 +41,14 @@ class _OrderKarticaState extends State<OrderKartica> {
                 ),
               ],
             ),
+            SizedBox(
+              height: SizeConfig.safeBlockVertical * 2,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Align(
-                  child: Text(
-                    widget.cijena,
-                  ),
+                Text(
+                  widget.cijena,
                 ),
               ],
             )
