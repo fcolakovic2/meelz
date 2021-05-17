@@ -120,6 +120,34 @@ class _OrderKarticaState extends State<OrderKartica> {
                               ? MainAxisAlignment.end
                               : MainAxisAlignment.start,
                           children: <Widget>[
+                            Column(
+                              children: <Widget>[
+                                Chip(
+                                  backgroundColor: Colors.yellow,
+                                  label: Text("Pending"),
+                                )
+                              ],
+                            ),
+                            Column(
+                              children: <Widget>[
+                                SizedBox(
+                                    width: SizeConfig.safeBlockHorizontal * 3)
+                              ],
+                            ),
+                            Column(
+                              children: <Widget>[
+                                Chip(
+                                  backgroundColor: Colors.grey,
+                                  label: Text("Feb 13 delivery"),
+                                )
+                              ],
+                            ),
+                            Column(
+                              children: <Widget>[
+                                SizedBox(
+                                    width: SizeConfig.safeBlockHorizontal * 3)
+                              ],
+                            ),
                             Column(children: <Widget>[
                               Text(
                                 widget.cijena,
