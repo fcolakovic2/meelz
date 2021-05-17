@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class OrderKartica extends StatefulWidget {
+  String title, subtitle, cijena, image;
+
+  OrderKartica(this.title, this.subtitle, this.cijena, this.image);
   @override
   _OrderKarticaState createState() => _OrderKarticaState();
 }
