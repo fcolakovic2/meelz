@@ -8,6 +8,19 @@ class OrderKartica extends StatefulWidget {
 class _OrderKarticaState extends State<OrderKartica> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Card(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              leading: Icon(Icons.album, size: 45),
+              title: Text('Sonu Nigam'),
+              subtitle: Text('Best of Sonu Nigam Song'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
