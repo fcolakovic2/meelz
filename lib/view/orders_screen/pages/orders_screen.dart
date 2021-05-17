@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/view/orders_screen/widgets/tapbar_custom.dart';
 
 class OrdersScreen extends StatefulWidget {
   @override
@@ -6,6 +7,12 @@ class OrdersScreen extends StatefulWidget {
 }
 
 class _OrdersScreenState extends State<OrdersScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -15,29 +22,9 @@ class _OrdersScreenState extends State<OrdersScreen> {
           centerTitle: true,
           elevation: 0.0,
           backgroundColor: Colors.white,
-          bottom: TabBar(
-            indicatorColor: Colors.amberAccent,
-            indicatorSize: TabBarIndicatorSize.label,
-            tabs: [
-              Text(
-                "ALL ORDERS",
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
-              Text(
-                "PENDING",
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
-              Text(
-                "SHIPPED",
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
-            ],
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(80.0),
+            child: TapBarCustom(),
           ),
           title: Text(
             'Orders',
@@ -48,6 +35,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
         ),
         backgroundColor: Colors.white,
         body: TabBarView(
+          physics: NeverScrollableScrollPhysics(),
           children: [
             Icon(Icons.flight, size: 350),
             Icon(Icons.directions_transit, size: 350),
