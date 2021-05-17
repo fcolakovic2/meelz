@@ -3,8 +3,10 @@ import 'package:meelz/SizeConfig.dart';
 
 class OrderKartica extends StatefulWidget {
   String title, subtitle, cijena, image;
+  bool imaSlike;
 
-  OrderKartica(this.title, this.subtitle, this.cijena, this.image);
+  OrderKartica(
+      this.title, this.subtitle, this.cijena, this.image, this.imaSlike);
   @override
   _OrderKarticaState createState() => _OrderKarticaState();
 }
@@ -13,16 +15,13 @@ class _OrderKarticaState extends State<OrderKartica> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    bool imaSlike = true;
-    if (widget.image == "") {
-      imaSlike = false;
-    }
+
     return Center(
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
-        child: !imaSlike
+        child: widget.imaSlike
             ? Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
@@ -46,6 +45,7 @@ class _OrderKarticaState extends State<OrderKartica> {
                     ],
                   ),
                   SizedBox(
+                    //ovdje dodaj sad i pending i delivery date, a dole obrisi pending i delivery dodaj sliku samo. zato se ne vide pending i delivery jer otvori uvijek ovo ako je slika true tj ako postoji
                     height: SizeConfig.safeBlockVertical * 2,
                   ),
                   Row(
@@ -84,30 +84,12 @@ class _OrderKarticaState extends State<OrderKartica> {
                   SizedBox(
                     height: SizeConfig.safeBlockVertical * 2,
                   ),
-                  !imaSlike
+                  widget.imaSlike
                       ? Row(
-                          mainAxisAlignment: !imaSlike
+                          mainAxisAlignment: !widget.imaSlike
                               ? MainAxisAlignment.end
                               : MainAxisAlignment.start,
                           children: <Widget>[
-                            Column(
-                              children: <Widget>[Text("Test")],
-                            ),
-                            Column(
-                              children: <Widget>[
-                                SizedBox(
-                                    width: SizeConfig.safeBlockHorizontal * 3)
-                              ],
-                            ),
-                            Column(
-                              children: <Widget>[Text("Test2")],
-                            ),
-                            Column(
-                              children: <Widget>[
-                                SizedBox(
-                                    width: SizeConfig.safeBlockHorizontal * 3)
-                              ],
-                            ),
                             Column(children: <Widget>[
                               Text(
                                 widget.cijena,
@@ -116,7 +98,7 @@ class _OrderKarticaState extends State<OrderKartica> {
                           ],
                         )
                       : Row(
-                          mainAxisAlignment: !imaSlike
+                          mainAxisAlignment: !widget.imaSlike
                               ? MainAxisAlignment.end
                               : MainAxisAlignment.start,
                           children: <Widget>[
