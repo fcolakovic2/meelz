@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/kartica.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: OrderKartica("Orders #13424", "Meat lovers 2, Coffe 2, Drinks 3",
+          "AED 150", "test"),
     );
   }
 }
