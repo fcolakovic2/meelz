@@ -16,11 +16,31 @@ class _OrderKarticaState extends State<OrderKartica> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            const ListTile(
-              leading: Icon(Icons.album, size: 45),
-              title: Text('Sonu Nigam'),
-              subtitle: Text('Best of Sonu Nigam Song'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  widget.title,
+                ),
+              ],
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  widget.subtitle,
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Align(
+                  child: Text(
+                    widget.cijena,
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
