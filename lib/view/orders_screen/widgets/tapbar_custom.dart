@@ -23,7 +23,7 @@ class _TapBarCustomState extends State<TapBarCustom> {
       child: Align(
         alignment: Alignment.centerLeft,
         child: Container(
-          margin: const EdgeInsets.only(left: 26.0, right: .0),
+          margin: const EdgeInsets.only(left: 20.0, right: .0),
           child: Container(
             width: MediaQuery.of(context).size.width / 1.2,
             child: TabBar(
