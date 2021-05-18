@@ -28,8 +28,9 @@ class _OrdersScreenState extends State<OrdersScreen> {
           title: Text(
             'Orders',
             style: TextStyle(
-              color: Colors.black,
-            ),
+                fontWeight: FontWeight.w500,
+                color: Color(0xff373737),
+                fontSize: 26),
           ),
         ),
         backgroundColor: Colors.grey[150],
