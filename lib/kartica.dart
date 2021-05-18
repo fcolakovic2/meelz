@@ -85,12 +85,18 @@ class _OrderKarticaState extends State<OrderKartica> {
                         children: [
                           Text(
                             widget.title,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff373737),
+                            ),
                           ),
                         ],
                       ),
                       Column(
                         children: <Widget>[
-                          SizedBox(width: SizeConfig.screenWidth * 0.68)
+                          SizedBox(width: SizeConfig.screenWidth * 0.65)
                         ],
                       ),
                       Column(
@@ -106,6 +112,12 @@ class _OrderKarticaState extends State<OrderKartica> {
                     children: <Widget>[
                       Text(
                         widget.subtitle,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xff373737).withOpacity(0.6),
+                        ),
                       ),
                     ],
                   ),
@@ -120,7 +132,15 @@ class _OrderKarticaState extends State<OrderKartica> {
                         children: <Widget>[
                           Chip(
                             backgroundColor: Colors.yellow,
-                            label: Text("Pending"),
+                            label: Text(
+                              "Pending",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xff68572D),
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -132,8 +152,16 @@ class _OrderKarticaState extends State<OrderKartica> {
                       Column(
                         children: <Widget>[
                           Chip(
-                            backgroundColor: Colors.grey,
-                            label: Text("Feb 13 delivery"),
+                            backgroundColor: Color(0xffF6F6F6),
+                            label: Text(
+                              "Feb 13 delivery",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xff373737),
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -146,6 +174,12 @@ class _OrderKarticaState extends State<OrderKartica> {
                         children: [
                           Text(
                             widget.cijena,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0x373737),
+                            ),
                           ),
                         ],
                       ),
