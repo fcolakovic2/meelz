@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: OrderKartica("Orders #13424", "Meat lovers 2, Coffe 2, Drinks 3",
-          "AED 150", "", true),
+          "AED 150", "", false),
     );
   }
 }

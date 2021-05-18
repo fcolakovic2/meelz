@@ -81,8 +81,20 @@ class _OrderKarticaState extends State<OrderKartica> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        widget.title,
+                      Column(
+                        children: [
+                          Text(
+                            widget.title,
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          SizedBox(width: SizeConfig.screenWidth * 0.68)
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[Icon(Icons.more_vert)],
                       ),
                     ],
                   ),
