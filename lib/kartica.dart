@@ -28,42 +28,6 @@ class _OrderKarticaState extends State<OrderKartica> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        widget.title,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: SizeConfig.safeBlockVertical * 2,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        widget.subtitle,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    //ovdje dodaj sad i pending i delivery date, a dole obrisi pending i delivery dodaj sliku samo. zato se ne vide pending i delivery jer otvori uvijek ovo ako je slika true tj ako postoji
-                    height: SizeConfig.safeBlockVertical * 2,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      Text(
-                        widget.cijena,
-                      ),
-                    ],
-                  )
-                ],
-              )
-            : Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
                       Column(children: <Widget>[
                         Container(
                           height: SizeConfig.safeBlockVertical * 15,
@@ -102,34 +66,6 @@ class _OrderKarticaState extends State<OrderKartica> {
                               ? MainAxisAlignment.end
                               : MainAxisAlignment.start,
                           children: <Widget>[
-                            Column(
-                              children: <Widget>[
-                                Chip(
-                                  backgroundColor: Colors.yellow,
-                                  label: Text("Pending"),
-                                )
-                              ],
-                            ),
-                            Column(
-                              children: <Widget>[
-                                SizedBox(
-                                    width: SizeConfig.safeBlockHorizontal * 3)
-                              ],
-                            ),
-                            Column(
-                              children: <Widget>[
-                                Chip(
-                                  backgroundColor: Colors.grey,
-                                  label: Text("Feb 13 delivery"),
-                                )
-                              ],
-                            ),
-                            Column(
-                              children: <Widget>[
-                                SizedBox(
-                                    width: SizeConfig.safeBlockHorizontal * 3)
-                              ],
-                            ),
                             Column(children: <Widget>[
                               Text(
                                 widget.cijena,
@@ -137,6 +73,72 @@ class _OrderKarticaState extends State<OrderKartica> {
                             ]),
                           ],
                         )
+                ],
+              )
+            : Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        widget.title,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical * 2,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        widget.subtitle,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    //ovdje dodaj sad i pending i delivery date, a dole obrisi pending i delivery dodaj sliku samo. zato se ne vide pending i delivery jer otvori uvijek ovo ako je slika true tj ako postoji
+                    height: SizeConfig.safeBlockVertical * 2,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Chip(
+                            backgroundColor: Colors.yellow,
+                            label: Text("Pending"),
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          SizedBox(width: SizeConfig.safeBlockHorizontal * 3)
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Chip(
+                            backgroundColor: Colors.grey,
+                            label: Text("Feb 13 delivery"),
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          SizedBox(width: SizeConfig.safeBlockHorizontal * 3)
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            widget.cijena,
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
                 ],
               ),
       ),
