@@ -27,56 +27,60 @@ class _OrderKarticaState extends State<OrderKartica> {
             ? Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Column(children: <Widget>[
-                        Container(
-                          height: SizeConfig.safeBlockVertical * 15,
-                          width: SizeConfig.safeBlockHorizontal * 15,
-                          child: Image.asset('assets/images/Rectangle711.png'),
-                        ),
-                      ]),
-                      Column(children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: Text(
-                            widget.title,
-                            style: TextStyle(
-                              fontFamily: "Inter",
-                              fontSize: 16,
-                              fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xff373737),
-                            ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 15.0, left: 15.0, bottom: 1.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Column(children: <Widget>[
+                          Container(
+                            height: SizeConfig.safeBlockVertical * 15,
+                            width: SizeConfig.safeBlockHorizontal * 15,
+                            child:
+                                Image.asset('assets/images/Rectangle711.png'),
                           ),
-                        ),
-                        Text(
-                          widget.subtitle,
-                          style: TextStyle(
-                            fontFamily: "Inter",
-                            fontSize: 14,
-                            fontStyle: FontStyle.normal,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff373737).withOpacity(0.6),
-                          ),
-                        ),
-                      ]),
-                    ],
+                        ]),
+                        Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                widget.title,
+                                style: TextStyle(
+                                  fontFamily: "Inter",
+                                  fontSize: 16,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0xff373737),
+                                ),
+                              ),
+                              Text(
+                                widget.subtitle,
+                                style: TextStyle(
+                                  fontFamily: "Inter",
+                                  fontSize: 14,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0xff373737).withOpacity(0.6),
+                                ),
+                              ),
+                            ]),
+                      ],
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Column(children: <Widget>[
-                        Padding(
-                          padding:
-                              const EdgeInsets.only(left: 78.0, bottom: 20.0),
-                          child: Text(
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 1.0, left: 78.0, bottom: 20.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Column(children: <Widget>[
+                          Text(
                             widget.cijena,
                           ),
-                        ),
-                      ]),
-                    ],
+                        ]),
+                      ],
+                    ),
                   )
                 ],
               )
