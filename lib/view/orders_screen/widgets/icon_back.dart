@@ -12,7 +12,7 @@ class IconBack extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         child: Icon(
           Icons.arrow_back_ios_rounded,
-          color: Colors.black,
+          color: Color(0xff373737),
           size: 15.0,
         ),
         onPressed: () {
