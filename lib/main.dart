@@ -4,12 +4,13 @@ import 'package:meelz/view/orders_screen/pages/orders_screen.dart';
 
 void main() {
   runApp(MyApp());
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
-          statusBarColor: Colors.white,
-          statusBarIconBrightness: Brightness.dark,
-          statusBarBrightness:
-              Brightness.dark) /* set Status bar icon color in iOS. */
-      );
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle.dark.copyWith(
+      statusBarColor: Colors.white,
+      statusBarIconBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.dark,
+    ), /* set Status bar icon color in iOS. */
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
         fontFamily: 'Inter',
         primarySwatch: Colors.blue,
       ),

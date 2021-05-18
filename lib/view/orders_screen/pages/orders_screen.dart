@@ -21,7 +21,6 @@ class _OrdersScreenState extends State<OrdersScreen> {
         appBar: appBarCustom("Orders"),
         backgroundColor: Colors.grey[150],
         body: TabBarView(
-          physics: NeverScrollableScrollPhysics(),
           children: [
             Icon(Icons.android, size: 350),
             Icon(Icons.directions_transit, size: 350),

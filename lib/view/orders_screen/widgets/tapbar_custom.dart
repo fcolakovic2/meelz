@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/dummy_data/dummy_data.dart';
 import 'package:meelz/utils/style/styles.dart';
+import 'package:meelz/view/orders_screen/widgets/m2dindicator.dart';
 import 'package:meelz/view/orders_screen/widgets/tab_element.dart';
 
+// ignore: must_be_immutable
 class TapBarCustom extends StatefulWidget {
   var lista;
   TapBarCustom(this.lista);
@@ -35,16 +37,10 @@ class _TapBarCustomState extends State<TapBarCustom> {
                   indexPage = value;
                 });
               },
-              indicator: UnderlineTabIndicator(
-                borderSide: BorderSide(
-                  width: 2.0,
-                  color: Color(0xffFFDF36),
-                ),
-                insets: EdgeInsets.only(
-                  right: indexPage == 0
-                      ? MediaQuery.of(context).size.width * 0.23
-                      : MediaQuery.of(context).size.width * 0.17,
-                ),
+              indicator: MD2Indicator(
+                indicatorSize: MD2IndicatorSize.tiny,
+                indicatorHeight: 3.0,
+                indicatorColor: Color(0xFFFFDF36),
               ),
               labelPadding: EdgeInsets.symmetric(vertical: 22.0),
               tabs: List<Widget>.generate(
