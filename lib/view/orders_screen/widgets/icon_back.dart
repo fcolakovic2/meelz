@@ -13,7 +13,7 @@ class IconBack extends StatelessWidget {
         child: Icon(
           Icons.arrow_back_ios_rounded,
           color: Color(0xff373737),
-          size: 15.0,
+          size: 18.0,
         ),
         onPressed: () {
           // Navigator.pushReplacement(
