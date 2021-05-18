@@ -20,10 +20,10 @@ class _OrdersScreenState extends State<OrdersScreen> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          elevation: 0.5,
+          elevation: 0,
           backgroundColor: Colors.white,
           bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(60.0),
+            preferredSize: const Size.fromHeight(81.0),
             child: TapBarCustom(),
           ),
           title: Container(

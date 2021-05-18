@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/utils/dummy_data/dummy_data.dart';
 
 TextStyle appBarText = TextStyle(
   fontWeight: FontWeight.w500,
@@ -14,3 +13,14 @@ TextStyle itemSlider = TextStyle(
   fontSize: 14,
   letterSpacing: 0.5,
 );
+
+BoxDecoration appBarBorder() {
+  return BoxDecoration(
+    border: Border(
+      bottom: BorderSide(
+        color: Color(0xffEEEEEE),
+        width: 1,
+      ),
+    ),
+  );
+}
