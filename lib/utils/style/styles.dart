@@ -24,3 +24,14 @@ BoxDecoration appBarBorder() {
     ),
   );
 }
+
+BoxDecoration appBarBorder2() {
+  return BoxDecoration(
+    border: Border(
+      bottom: BorderSide(
+        color: Colors.grey[200],
+        width: 0.5,
+      ),
+    ),
+  );
+}

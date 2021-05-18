@@ -5,14 +5,14 @@ import 'package:meelz/view/orders_screen/widgets/m2dindicator.dart';
 import 'package:meelz/view/orders_screen/widgets/tab_element.dart';
 
 // ignore: must_be_immutable
-class TapBarCustom extends StatefulWidget {
+class TabBarCustom extends StatefulWidget {
   var lista;
-  TapBarCustom(this.lista);
+  TabBarCustom(this.lista);
   @override
-  _TapBarCustomState createState() => _TapBarCustomState();
+  _TabBarCustomState createState() => _TabBarCustomState();
 }
 
-class _TapBarCustomState extends State<TapBarCustom> {
+class _TabBarCustomState extends State<TabBarCustom> {
   @override
   void initState() {
     super.initState();
