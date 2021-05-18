@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/dummy_data/dummy_data.dart';
 import 'package:meelz/utils/style/styles.dart';
+import 'package:meelz/view/orders_screen/widgets/tab_element.dart';
 
 class TapBarCustom extends StatefulWidget {
+  var lista;
+  TapBarCustom(this.lista);
   @override
   _TapBarCustomState createState() => _TapBarCustomState();
 }
@@ -40,47 +43,14 @@ class _TapBarCustomState extends State<TapBarCustom> {
                 insets: EdgeInsets.only(
                   right: indexPage == 0
                       ? MediaQuery.of(context).size.width * 0.23
-                      : MediaQuery.of(context).size.width * 0.185,
+                      : MediaQuery.of(context).size.width * 0.17,
                 ),
               ),
               labelPadding: EdgeInsets.symmetric(vertical: 22.0),
-
-              // indicatorSize: TabBarIndicatorSize.label,
-              tabs: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                    padding: const EdgeInsets.only(right: 30),
-                    // width: 100,
-                    child: Text(
-                      "ALL ORDERS",
-                      style: itemSlider,
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Container(
-                    padding: const EdgeInsets.only(right: 30),
-                    width: 100,
-                    child: Text(
-                      "PENDING",
-                      style: itemSlider,
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                    padding: const EdgeInsets.only(right: 30),
-                    width: 100,
-                    child: Text(
-                      "SHIPPED",
-                      style: itemSlider,
-                    ),
-                  ),
-                ),
-              ],
+              tabs: List<Widget>.generate(
+                ordersList.length,
+                (counter) => tabElement(widget.lista[counter]),
+              ),
             ),
           ),
         ),
