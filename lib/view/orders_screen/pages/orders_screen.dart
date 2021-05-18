@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/style/styles.dart';
 import 'package:meelz/view/orders_screen/widgets/tapbar_custom.dart';
 
 class OrdersScreen extends StatefulWidget {
@@ -25,12 +26,11 @@ class _OrdersScreenState extends State<OrdersScreen> {
             preferredSize: const Size.fromHeight(60.0),
             child: TapBarCustom(),
           ),
-          title: Text(
-            'Orders',
-            style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: Color(0xff373737),
-                fontSize: 26),
+          title: Container(
+            child: Text(
+              'Orders',
+              style: appBarText,
+            ),
           ),
         ),
         backgroundColor: Colors.grey[150],

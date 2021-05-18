@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/dummy_data/dummy_data.dart';
+import 'package:meelz/utils/style/styles.dart';
 
 class TapBarCustom extends StatefulWidget {
   @override
@@ -21,6 +22,8 @@ class _TapBarCustomState extends State<TapBarCustom> {
         child: Container(
           width: MediaQuery.of(context).size.width / 1.2,
           child: TabBar(
+            labelColor: Color(0xFF373737),
+            unselectedLabelColor: Color(0xFF373737).withOpacity(0.7),
             isScrollable: true,
             onTap: (value) {
               setState(() {
@@ -41,34 +44,24 @@ class _TapBarCustomState extends State<TapBarCustom> {
             // indicatorSize: TabBarIndicatorSize.label,
             tabs: [
               Container(
-                width: 100,
+                padding: const EdgeInsets.only(right: 30),
                 child: Text(
                   "ALL ORDERS",
-                  style: TextStyle(
-                    color: indexPage == 0
-                        ? Color(0xFF373737)
-                        : Color(0xFF373737).withOpacity(0.7),
-                  ),
+                  style: itemSlider,
                 ),
               ),
               Container(
-                width: 100,
+                padding: const EdgeInsets.only(right: 30),
                 child: Text(
                   "PENDING",
-                  style: TextStyle(
-                      color: indexPage == 1
-                          ? Color(0xFF373737)
-                          : Color(0xFF373737).withOpacity(0.7)),
+                  style: itemSlider,
                 ),
               ),
               Container(
-                width: 100,
+                padding: const EdgeInsets.only(right: 30),
                 child: Text(
                   "SHIPPED",
-                  style: TextStyle(
-                      color: indexPage == 2
-                          ? Color(0xFF373737)
-                          : Color(0xFF373737).withOpacity(0.7)),
+                  style: itemSlider,
                 ),
               ),
             ],
