@@ -39,9 +39,23 @@ class _OrderKarticaState extends State<OrderKartica> {
                       Column(children: <Widget>[
                         Text(
                           widget.title,
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontStyle: FontStyle.normal,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xff373737),
+                          ),
                         ),
                         SizedBox(height: SizeConfig.safeBlockVertical * 2),
-                        Text(widget.subtitle),
+                        Text(
+                          widget.subtitle,
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontStyle: FontStyle.normal,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xff373737).withOpacity(0.6),
+                          ),
+                        ),
                       ]),
                     ],
                   ),
@@ -69,6 +83,12 @@ class _OrderKarticaState extends State<OrderKartica> {
                             Column(children: <Widget>[
                               Text(
                                 widget.cijena,
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0x373737),
+                                ),
                               ),
                             ]),
                           ],
