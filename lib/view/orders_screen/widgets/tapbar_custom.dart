@@ -45,26 +45,30 @@ class _TapBarCustomState extends State<TapBarCustom> {
                 child: Text(
                   "ALL ORDERS",
                   style: TextStyle(
-                    color: indexPage == 0 ? Colors.black : Colors.grey,
+                    color: indexPage == 0
+                        ? Color(0xFF373737)
+                        : Color(0xFF373737).withOpacity(0.7),
                   ),
                 ),
               ),
               Container(
                 width: 100,
                 child: Text(
-                  "PENDING   ",
+                  "PENDING",
                   style: TextStyle(
-                    color: indexPage == 1 ? Colors.black : Colors.grey,
-                  ),
+                      color: indexPage == 1
+                          ? Color(0xFF373737)
+                          : Color(0xFF373737).withOpacity(0.7)),
                 ),
               ),
               Container(
                 width: 100,
                 child: Text(
-                  "SHIPPED   ",
+                  "SHIPPED",
                   style: TextStyle(
-                    color: indexPage == 2 ? Colors.black : Colors.grey,
-                  ),
+                      color: indexPage == 2
+                          ? Color(0xFF373737)
+                          : Color(0xFF373737).withOpacity(0.7)),
                 ),
               ),
             ],
