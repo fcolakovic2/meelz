@@ -32,8 +32,8 @@ class _TabBarCustomState extends State<TabBarCustom> {
           child: Container(
             width: MediaQuery.of(context).size.width / 1.2,
             child: TabBar(
-              labelColor: Color(0xFF373737),
-              unselectedLabelColor: Color(0xFF373737).withOpacity(0.7),
+              labelColor: const Color(0xFF373737),
+              unselectedLabelColor: const Color(0xFF373737).withOpacity(0.7),
               isScrollable: true,
               onTap: (value) {
                 controllers.changeIndex(value);
@@ -43,7 +43,7 @@ class _TabBarCustomState extends State<TabBarCustom> {
                 indicatorHeight: 3.0,
                 indicatorColor: Color(0xFFFFDF36),
               ),
-              labelPadding: EdgeInsets.symmetric(vertical: 22.0),
+              labelPadding: const EdgeInsets.symmetric(vertical: 22.0),
               tabs: List<Widget>.generate(
                 widget.lista.length,
                 (counter) => tabElement(widget.lista[counter]),
