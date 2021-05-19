@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/providers/page_index.dart';
-import 'package:meelz/utils/dummy_data/dummy_data.dart';
 import 'package:meelz/utils/style/styles.dart';
 import 'package:meelz/view/orders_screen/widgets/m2dindicator.dart';
 import 'package:meelz/view/orders_screen/widgets/tab_element.dart';
@@ -46,7 +45,7 @@ class _TabBarCustomState extends State<TabBarCustom> {
               ),
               labelPadding: EdgeInsets.symmetric(vertical: 22.0),
               tabs: List<Widget>.generate(
-                ordersList.length,
+                widget.lista.length,
                 (counter) => tabElement(widget.lista[counter]),
               ),
             ),
