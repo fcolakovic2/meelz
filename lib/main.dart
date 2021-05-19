@@ -27,8 +27,7 @@ class MyApp extends StatelessWidget {
           "Orders #13424",
           "Meat lovers 2, Coffe 2, Drinks 3zufggvgztgfrtzug67r7tugtzugtuzgitugtgtzgzuzguzihgiuhjiuojuojuojiuojuoi",
           "AED 150",
-          "assets/images/Rectangle711.png",
-          false),
+          "assets/images/Rectangle711.png"),
     );
   }
 }

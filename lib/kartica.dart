@@ -3,10 +3,8 @@ import 'package:meelz/SizeConfig.dart';
 
 class OrderKartica extends StatefulWidget {
   String title, subtitle, cijena, image;
-  bool imaSlike;
 
-  OrderKartica(
-      this.title, this.subtitle, this.cijena, this.image, this.imaSlike);
+  OrderKartica(this.title, this.subtitle, this.cijena, this.image);
   @override
   _OrderKarticaState createState() => _OrderKarticaState();
 }
@@ -14,16 +12,14 @@ class OrderKartica extends StatefulWidget {
 class _OrderKarticaState extends State<OrderKartica> {
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
-
     return Center(
       child: Card(
-        shape: !widget.imaSlike
+        shape: widget.image == ""
             ? RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0),
               )
             : RoundedRectangleBorder(),
-        child: widget.imaSlike
+        child: widget.image != ""
             ? Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
@@ -44,23 +40,22 @@ class _OrderKarticaState extends State<OrderKartica> {
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Expanded(
-                                  child: Text(
-                                    widget.title,
-                                    softWrap: false,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontFamily: "Inter",
-                                      fontSize: 16,
-                                      fontStyle: FontStyle.normal,
-                                      fontWeight: FontWeight.w500,
-                                      color: Color(0xff373737),
-                                    ),
+                                Text(
+                                  widget.title,
+                                  softWrap: false,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontFamily: "Inter",
+                                    fontSize: 16,
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff373737),
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 380,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.6,
                                   child: Text(
                                     widget.subtitle,
                                     softWrap: false,
@@ -71,7 +66,7 @@ class _OrderKarticaState extends State<OrderKartica> {
                                       fontSize: 14,
                                       fontStyle: FontStyle.normal,
                                       fontWeight: FontWeight.w500,
-                                      color: Color(0xff373737).withOpacity(0.6),
+                                      color: Color(0xff373737).withOpacity(0.8),
                                     ),
                                   ),
                                 ),
@@ -136,7 +131,7 @@ class _OrderKarticaState extends State<OrderKartica> {
                         padding:
                             const EdgeInsets.only(left: 20.0, bottom: 10.0),
                         child: SizedBox(
-                          width: 380,
+                          width: MediaQuery.of(context).size.width * 0.8,
                           child: Text(
                             widget.subtitle,
                             softWrap: false,
