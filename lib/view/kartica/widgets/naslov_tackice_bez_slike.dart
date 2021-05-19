@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/style/styles.dart';
 
 class NaslovTackice extends StatelessWidget {
   const NaslovTackice({
@@ -20,13 +21,7 @@ class NaslovTackice extends StatelessWidget {
               softWrap: false,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontSize: 16,
-                fontFamily: "Inter",
-                fontStyle: FontStyle.normal,
-                fontWeight: FontWeight.w500,
-                color: Color(0xff373737),
-              ),
+              style: stilNaslova,
             ),
           ],
         ),

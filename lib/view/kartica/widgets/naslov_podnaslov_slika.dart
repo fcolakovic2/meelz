@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/style/styles.dart';
 
 class NaslovPodnaslovSaSlikom extends StatelessWidget {
   const NaslovPodnaslovSaSlikom({
@@ -20,13 +21,7 @@ class NaslovPodnaslovSaSlikom extends StatelessWidget {
             softWrap: false,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              fontFamily: "Inter",
-              fontSize: 16,
-              fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.w500,
-              color: Color(0xff373737),
-            ),
+            style: stilNaslova,
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.6,
@@ -35,13 +30,7 @@ class NaslovPodnaslovSaSlikom extends StatelessWidget {
               softWrap: false,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontFamily: "Inter",
-                fontSize: 14,
-                fontStyle: FontStyle.normal,
-                fontWeight: FontWeight.w500,
-                color: Color(0xff373737).withOpacity(0.8),
-              ),
+              style: stilPodnaslova,
             ),
           ),
         ]);

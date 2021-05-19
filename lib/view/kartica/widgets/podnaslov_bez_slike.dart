@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/style/styles.dart';
 
 class PodnaslovBezSlike extends StatelessWidget {
   const PodnaslovBezSlike({
@@ -22,13 +23,7 @@ class PodnaslovBezSlike extends StatelessWidget {
               softWrap: false,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontSize: 14,
-                fontFamily: "Inter",
-                fontStyle: FontStyle.normal,
-                fontWeight: FontWeight.w500,
-                color: Color(0xff373737).withOpacity(0.6),
-              ),
+              style: stilPodnaslova,
             ),
           ),
         ),

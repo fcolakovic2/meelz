@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/style/styles.dart';
 
 class PendingChip extends StatelessWidget {
   const PendingChip({
@@ -13,13 +14,7 @@ class PendingChip extends StatelessWidget {
       backgroundColor: Color(0xffFFDF36),
       label: Text(
         "Pending",
-        style: TextStyle(
-          fontFamily: "Inter",
-          fontSize: 12,
-          fontStyle: FontStyle.normal,
-          fontWeight: FontWeight.w500,
-          color: Color(0xff68572D),
-        ),
+        style: stilPending,
       ),
     );
   }

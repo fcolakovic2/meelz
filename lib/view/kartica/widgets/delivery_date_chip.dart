@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/style/styles.dart';
 
 class DeliveryDateChip extends StatelessWidget {
   const DeliveryDateChip({
@@ -13,13 +14,7 @@ class DeliveryDateChip extends StatelessWidget {
       backgroundColor: Color(0xffF6F6F6),
       label: Text(
         "Feb 13 delivery",
-        style: TextStyle(
-          fontFamily: "Inter",
-          fontSize: 12,
-          fontStyle: FontStyle.normal,
-          fontWeight: FontWeight.w500,
-          color: Color(0xff373737),
-        ),
+        style: stilDelivery,
       ),
     );
   }
