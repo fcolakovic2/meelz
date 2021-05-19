@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/style/styles.dart';
 
 class CijenaBezSlike extends StatelessWidget {
   const CijenaBezSlike({
@@ -12,13 +13,7 @@ class CijenaBezSlike extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       cijena,
-      style: TextStyle(
-        fontSize: 16,
-        fontFamily: "Inter",
-        fontStyle: FontStyle.normal,
-        fontWeight: FontWeight.w500,
-        color: Color(0xff373737),
-      ),
+      style: stilCijene,
     );
   }
 }

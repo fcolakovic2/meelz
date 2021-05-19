@@ -31,3 +31,11 @@ final TextStyle stilPodnaslova = TextStyle(
   fontWeight: FontWeight.w500,
   color: Color(0xff373737).withOpacity(0.8),
 );
+
+final TextStyle stilCijene = TextStyle(
+  fontSize: 16,
+  fontFamily: "Inter",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w500,
+  color: Color(0xff373737),
+);
