@@ -36,8 +36,7 @@ class _OrderKarticaState extends State<OrderKartica> {
                         Column(children: <Widget>[
                           Container(
                             height: 40,
-                            child:
-                                Image.asset('assets/images/Rectangle711.png'),
+                            child: Image.asset(widget.image),
                           ),
                         ]),
                         Padding(
@@ -45,24 +44,35 @@ class _OrderKarticaState extends State<OrderKartica> {
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text(
-                                  widget.title,
-                                  style: TextStyle(
-                                    fontFamily: "Inter",
-                                    fontSize: 16,
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w500,
-                                    color: Color(0xff373737),
+                                Expanded(
+                                  child: Text(
+                                    widget.title,
+                                    softWrap: false,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontFamily: "Inter",
+                                      fontSize: 16,
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0xff373737),
+                                    ),
                                   ),
                                 ),
-                                Text(
-                                  widget.subtitle,
-                                  style: TextStyle(
-                                    fontFamily: "Inter",
-                                    fontSize: 14,
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w500,
-                                    color: Color(0xff373737).withOpacity(0.6),
+                                SizedBox(
+                                  width: 380,
+                                  child: Text(
+                                    widget.subtitle,
+                                    softWrap: false,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontFamily: "Inter",
+                                      fontSize: 14,
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0xff373737).withOpacity(0.6),
+                                    ),
                                   ),
                                 ),
                               ]),
@@ -98,6 +108,9 @@ class _OrderKarticaState extends State<OrderKartica> {
                           children: [
                             Text(
                               widget.title,
+                              softWrap: false,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: "Inter",
@@ -122,14 +135,20 @@ class _OrderKarticaState extends State<OrderKartica> {
                       Padding(
                         padding:
                             const EdgeInsets.only(left: 20.0, bottom: 10.0),
-                        child: Text(
-                          widget.subtitle,
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontFamily: "Inter",
-                            fontStyle: FontStyle.normal,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff373737).withOpacity(0.6),
+                        child: SizedBox(
+                          width: 380,
+                          child: Text(
+                            widget.subtitle,
+                            softWrap: false,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontFamily: "Inter",
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff373737).withOpacity(0.6),
+                            ),
                           ),
                         ),
                       ),

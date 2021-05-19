@@ -23,8 +23,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: OrderKartica("Orders #13424", "Meat lovers 2, Coffe 2, Drinks 3",
-          "AED 150", "", false),
+      home: OrderKartica(
+          "Orders #13424",
+          "Meat lovers 2, Coffe 2, Drinks 3zufggvgztgfrtzug67r7tugtzugtuzgitugtgtzgzuzguzihgiuhjiuojuojuojiuojuoi",
+          "AED 150",
+          "assets/images/Rectangle711.png",
+          false),
     );
   }
 }
