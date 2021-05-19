@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/kartica.dart';
+import 'package:meelz/view/kartica/pages/kartica.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           "Orders #13424",
           "Meat lovers 2, Coffe 2, Drinks 3zufggvgztgfrtzug67r7tugtzugtuzgitugtgtzgzuzguzihgiuhjiuojuojuojiuojuoi",
           "AED 150",
-          "assets/images/Rectangle711.png"),
+          ""),
     );
   }
 }
