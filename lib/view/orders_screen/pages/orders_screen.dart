@@ -17,7 +17,6 @@ class _OrdersScreenState extends State<OrdersScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return defaultTabBarCustom(
-        tabList, widgetsList, appBarCustom(appBarTitle), null);
+    return defaultTabBarCustom(tabList, widgetsList, appBarCustom(appBarTitle));
   }
 }
