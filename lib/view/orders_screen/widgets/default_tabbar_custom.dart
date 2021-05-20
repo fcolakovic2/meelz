@@ -23,10 +23,13 @@ Column tabBarSlider(ordersList, widgetsList, [widgetsBefore]) {
       ),
       tabBarReusable(ordersList),
       Expanded(
-        child: TabBarView(
-          children: List<Widget>.generate(
-            widgetsList.length,
-            (counter) => widgetsList[counter],
+        child: Padding(
+          padding: const EdgeInsets.only(left: 0.0, right: 0.0),
+          child: TabBarView(
+            children: List<Widget>.generate(
+              widgetsList.length,
+              (counter) => widgetsList[counter],
+            ),
           ),
         ),
       ),

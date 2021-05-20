@@ -25,11 +25,13 @@ class _OrderKarticaState extends State<OrderKartica> {
                 naslov: widget.title,
                 subnaslov: widget.subtitle,
                 srcslike: widget.image,
-                cijena: widget.cijena)
+                cijena: widget.cijena,
+              )
             : KarticaBezSlike(
                 naslov: widget.title,
                 podnaslov: widget.subtitle,
-                cijena: widget.cijena),
+                cijena: widget.cijena,
+              ),
       ),
     );
   }
