@@ -10,14 +10,21 @@ AppBar appBarCustom2(text) {
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          child: IconBack(),
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0),
+          child: Container(
+            child: IconBack(),
+          ),
         ),
         Container(
-          child: Text(text, style: stilNaslova),
+          child: Text(text, style: stilNaslovaAppBar),
         ),
         Container(
-          child: Icon(Icons.more_vert),
+          child: IconButton(
+            icon: Icon(Icons.more_vert),
+            color: Colors.black,
+            onPressed: () {},
+          ),
         ),
       ],
     ),
