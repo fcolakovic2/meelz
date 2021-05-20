@@ -80,3 +80,11 @@ final TextStyle stilDatuma = TextStyle(
   fontWeight: FontWeight.w500,
   color: Color(0xff373737).withOpacity(0.6),
 );
+
+final TextStyle stilNaslovaAppBar = TextStyle(
+  fontSize: 26,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  color: Color(0xff373737),
+);
