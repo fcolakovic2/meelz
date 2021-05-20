@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:meelz/view/kartica/widgets/kartica_bez_slike.dart';
 import 'package:meelz/view/kartica/widgets/kartica_sa_slikom.dart';
 
 // ignore: must_be_immutable
 class OrderKartica extends StatefulWidget {
-  String title, subtitle, cijena, image, status;
+  String title, subtitle, cijena, image, status, datumStr;
+  DateTime datum;
 
-  OrderKartica(this.title, this.subtitle, this.cijena, this.image, this.status);
+  OrderKartica(this.title, this.subtitle, this.cijena, this.image, this.status,
+      this.datum) {
+    datumStr = DateFormat('MMM ${datum.day}, yyyy – kk:mm').format(datum);
+  }
 
   @override
   _OrderKarticaState createState() => _OrderKarticaState();

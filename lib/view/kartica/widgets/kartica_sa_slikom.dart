@@ -26,12 +26,14 @@ class KarticaSaSlikom extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Column(children: <Widget>[
-                Container(
-                  height: 40,
-                  child: Image.asset(srcslike),
-                ),
-              ]),
+              Column(
+                children: <Widget>[
+                  Container(
+                    height: 40,
+                    child: Image.asset(srcslike),
+                  ),
+                ],
+              ),
               Padding(
                 padding: const EdgeInsets.only(left: 13.0),
                 child: NaslovPodnaslovSaSlikom(

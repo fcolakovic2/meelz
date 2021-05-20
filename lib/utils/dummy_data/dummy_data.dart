@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/utils/style/styles.dart';
 import 'package:meelz/view/kartica/pages/kartica.dart';
+import 'package:meelz/view/orders_screen/widgets/listview_custom.dart';
 
 int indexPage = 0;
 
@@ -8,88 +8,15 @@ List<String> tabList = ["ALL ORDERS", "PENDING", "SHIPPED"];
 
 List<OrderKartica> cardsList = [
   OrderKartica("Orders #13424", "Meat lovers 2, Coffe 2, Drinks 3", "AED 150",
-      "", "Pending"),
+      "", "Pending", DateTime.now()),
   OrderKartica("Order #32324", "Meat lovers 2, Coffe 2, Drinks 3", "AED 250",
-      "", "Shipped"),
+      "", "Shipped", DateTime(2021, 1, 25, 12, 34)),
   OrderKartica("Order #22525", "Meat lovers 2, Coffe 2, Drinks 3", "AED 220",
-      "", "Shipped"),
+      "", "Shipped", DateTime(2021, 1, 25, 13, 35)),
 ];
 
 List<Widget> widgetsList = [
-  NotificationListener<OverscrollIndicatorNotification>(
-    // ignore: missing_return
-    onNotification: (overscroll) {
-      overscroll.disallowGlow();
-    },
-    child: ListView(
-      children: List<Widget>.generate(
-        cardsList.length,
-        (counter) => Padding(
-          padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 10.0),
-                child: Text("TODAY AT 15:15", style: stilDatuma),
-              ),
-              cardsList[counter],
-            ],
-          ),
-        ),
-      ),
-    ),
-  ),
-  NotificationListener<OverscrollIndicatorNotification>(
-    // ignore: missing_return
-    onNotification: (overscroll) {
-      overscroll.disallowGlow();
-    },
-    child: ListView(
-      children: List<Widget>.generate(
-        cardsList.length,
-        (counter) => cardsList[counter].status == "Pending"
-            ? Padding(
-                padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 10.0),
-                      child: Text("TODAY AT 15:15", style: stilDatuma),
-                    ),
-                    cardsList[counter],
-                  ],
-                ),
-              )
-            : Container(),
-      ),
-    ),
-  ),
-  NotificationListener<OverscrollIndicatorNotification>(
-    // ignore: missing_return
-    onNotification: (overscroll) {
-      overscroll.disallowGlow();
-    },
-    child: ListView(
-      children: List<Widget>.generate(
-        cardsList.length,
-        (counter) => cardsList[counter].status == "Shipped"
-            ? Padding(
-                padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 10.0),
-                      child: Text("TODAY AT 15:15", style: stilDatuma),
-                    ),
-                    cardsList[counter],
-                  ],
-                ),
-              )
-            : Container(),
-      ),
-    ),
-  ),
+  listViewCustomAll(cardsList),
+  listViewCustomPending(cardsList),
+  listViewCustomShipped(cardsList),
 ];
