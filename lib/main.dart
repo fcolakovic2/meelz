@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:meelz/app_bar_custom.dart';
 import 'package:meelz/providers/page_index.dart';
 import 'package:meelz/view/orders_screen/pages/orders_screen.dart';
+import 'package:meelz/view/orders_screen/widgets/appbar.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -27,6 +29,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: Scaffold(
+        appBar: appBarCustom2("Test"),
+      ),
+    );
+    /* return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -36,6 +43,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: OrdersScreen(),
-    );
+    ); */
   }
 }
