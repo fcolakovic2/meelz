@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/view/kartica/widgets/cijena_slika.dart';
-import 'package:meelz/view/kartica/widgets/naslov_podnaslov_slika.dart';
+import 'package:meelz/view/kartica/widgets/price_image.dart';
+import 'package:meelz/view/kartica/widgets/title_subtitle_with_image.dart';
 
-class KarticaSaSlikom extends StatelessWidget {
-  const KarticaSaSlikom({
+class CardWithImage extends StatelessWidget {
+  const CardWithImage({
     Key key,
     @required this.naslov,
     @required this.subnaslov,
@@ -36,13 +36,13 @@ class KarticaSaSlikom extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 13.0),
-                child: NaslovPodnaslovSaSlikom(
+                child: TitleSubtitleWithImage(
                     naslov: naslov, subnaslov: subnaslov),
               ),
             ],
           ),
         ),
-        CijenaSlika(cijena: cijena)
+        PriceImage(cijena: cijena)
       ],
     );
   }

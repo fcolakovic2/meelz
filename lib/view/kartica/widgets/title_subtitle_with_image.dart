@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/style/styles.dart';
 
-class NaslovPodnaslovSaSlikom extends StatelessWidget {
-  const NaslovPodnaslovSaSlikom({
+class TitleSubtitleWithImage extends StatelessWidget {
+  const TitleSubtitleWithImage({
     Key key,
     @required this.naslov,
     @required this.subnaslov,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/style/styles.dart';
 
-class NaslovTackice extends StatelessWidget {
-  const NaslovTackice({
+class TitleDots extends StatelessWidget {
+  const TitleDots({
     Key key,
     @required this.naslov,
   }) : super(key: key);

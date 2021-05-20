@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CijenaSlika extends StatelessWidget {
-  const CijenaSlika({
+class PriceImage extends StatelessWidget {
+  const PriceImage({
     Key key,
     @required this.cijena,
   }) : super(key: key);

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/style/styles.dart';
 
-class PodnaslovBezSlike extends StatelessWidget {
-  const PodnaslovBezSlike({
+class SubtitleWithoutImage extends StatelessWidget {
+  const SubtitleWithoutImage({
     Key key,
     @required this.podnaslov,
   }) : super(key: key);

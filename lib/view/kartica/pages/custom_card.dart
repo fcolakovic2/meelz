@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:meelz/view/kartica/widgets/kartica_bez_slike.dart';
-import 'package:meelz/view/kartica/widgets/kartica_sa_slikom.dart';
+import 'package:meelz/view/kartica/widgets/card_without_image.dart';
+import 'package:meelz/view/kartica/widgets/card_with_image.dart';
 
 // ignore: must_be_immutable
-class OrderKartica extends StatefulWidget {
+class CustomCard extends StatefulWidget {
   String title, subtitle, cijena, image, status, dateOrderStr, deliveryDateStr;
   DateTime orderDate, deliveryDate;
 
-  OrderKartica(this.title, this.subtitle, this.cijena, this.image, this.status,
+  CustomCard(this.title, this.subtitle, this.cijena, this.image, this.status,
       this.orderDate, this.deliveryDate) {
     dateOrderStr =
         DateFormat('MMM ${orderDate.day}, yyyy – kk:mm').format(orderDate);
@@ -17,10 +17,10 @@ class OrderKartica extends StatefulWidget {
   }
 
   @override
-  _OrderKarticaState createState() => _OrderKarticaState();
+  _CustomCardState createState() => _CustomCardState();
 }
 
-class _OrderKarticaState extends State<OrderKartica> {
+class _CustomCardState extends State<CustomCard> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -33,13 +33,13 @@ class _OrderKarticaState extends State<OrderKartica> {
               )
             : RoundedRectangleBorder(),
         child: widget.image != ""
-            ? KarticaSaSlikom(
+            ? CardWithImage(
                 naslov: widget.title,
                 subnaslov: widget.subtitle,
                 srcslike: widget.image,
                 cijena: widget.cijena,
               )
-            : KarticaBezSlike(
+            : CardWithoutImage(
                 naslov: widget.title,
                 podnaslov: widget.subtitle,
                 cijena: widget.cijena,

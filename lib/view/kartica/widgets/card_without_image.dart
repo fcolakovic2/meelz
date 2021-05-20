@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/view/kartica/widgets/cijena_bez_slike.dart';
+import 'package:meelz/view/kartica/widgets/price_without_image.dart';
 import 'package:meelz/view/kartica/widgets/delivery_date_chip.dart';
-import 'package:meelz/view/kartica/widgets/naslov_tackice_bez_slike.dart';
+import 'package:meelz/view/kartica/widgets/title_dots_without_image.dart';
 import 'package:meelz/view/kartica/widgets/pending_chip.dart';
-import 'package:meelz/view/kartica/widgets/podnaslov_bez_slike.dart';
+import 'package:meelz/view/kartica/widgets/subtitle_without_image.dart';
 
-class KarticaBezSlike extends StatelessWidget {
-  const KarticaBezSlike({
+class CardWithoutImage extends StatelessWidget {
+  const CardWithoutImage({
     Key key,
     @required this.naslov,
     @required this.podnaslov,
@@ -30,9 +30,9 @@ class KarticaBezSlike extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 8.0),
-          child: NaslovTackice(naslov: naslov),
+          child: TitleDots(naslov: naslov),
         ),
-        PodnaslovBezSlike(podnaslov: podnaslov),
+        SubtitleWithoutImage(podnaslov: podnaslov),
         Padding(
           padding: const EdgeInsets.fromLTRB(18.0, 0, 20.0, 20),
           child: Row(
@@ -55,7 +55,7 @@ class KarticaBezSlike extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  CijenaBezSlike(cijena: cijena),
+                  PriceWithoutImage(cijena: cijena),
                 ],
               ),
             ],
