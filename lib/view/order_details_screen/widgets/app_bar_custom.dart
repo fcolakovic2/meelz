@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/icon_back.dart';
+import 'package:meelz/view/order_details_screen/widgets/icon_back.dart';
 import 'package:meelz/utils/style/styles.dart';
 
 AppBar appBarCustom2(text) {
@@ -10,11 +10,8 @@ AppBar appBarCustom2(text) {
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 20.0),
-          child: Container(
-            child: IconBack(),
-          ),
+        Container(
+          child: IconBack(),
         ),
         Container(
           child: Text(text, style: stilNaslovaAppBar),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:meelz/view/card_custom/widgets/card_with_image.dart';
-import 'package:meelz/view/card_custom/widgets/card_without_image.dart';
+import 'package:meelz/view/orders_screen/widgets/card_custom/widgets/card_with_image.dart';
+import 'package:meelz/view/orders_screen/widgets/card_custom/widgets/card_without_image.dart';
 
 // ignore: must_be_immutable
 class CustomCard extends StatefulWidget {

@@ -88,3 +88,11 @@ final TextStyle stilNaslovaAppBar = TextStyle(
   fontWeight: FontWeight.w700,
   color: Color(0xff373737),
 );
+
+final TextStyle styleListItems = TextStyle(
+  fontSize: 16,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  color: Color(0xff373737),
+);

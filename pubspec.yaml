@@ -64,6 +64,9 @@ flutter:
     - family: Inter
       fonts:
         - asset: assets/fonts/Inter-Medium.ttf
+    - family: Averta
+      fonts:
+        - asset: assets/fonts/Averta Cyrillic Regular.otf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

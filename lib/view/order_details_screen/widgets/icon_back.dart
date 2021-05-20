@@ -15,14 +15,7 @@ class IconBack extends StatelessWidget {
           color: Color(0xff373737),
           size: 18.0,
         ),
-        onPressed: () {
-          // Navigator.pushReplacement(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (_) => SignUpPage(),
-          //   ),
-          //);
-        },
+        onPressed: () {},
       ),
     );
   }
