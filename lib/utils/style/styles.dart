@@ -72,3 +72,11 @@ final TextStyle stilCijene = TextStyle(
   fontWeight: FontWeight.w500,
   color: Color(0xff373737),
 );
+
+final TextStyle stilDatuma = TextStyle(
+  fontSize: 12,
+  fontFamily: "Inter",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w500,
+  color: Color(0xff373737).withOpacity(0.6),
+);
