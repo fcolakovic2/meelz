@@ -8,18 +8,24 @@ class ListDetails extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 38.0),
       child: ListView(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Status",
-                style: styleListItems,
+          Container(
+            decoration: listBorder(),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 18.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Status",
+                    style: styleListItems,
+                  ),
+                  Text(
+                    "Delivery expected",
+                    style: styleListItems,
+                  ),
+                ],
               ),
-              Text(
-                "Delivery expected",
-                style: styleListItems,
-              ),
-            ],
+            ),
           ),
         ],
       ),

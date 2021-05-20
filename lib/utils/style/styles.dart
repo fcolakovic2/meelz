@@ -96,3 +96,14 @@ final TextStyle styleListItems = TextStyle(
   fontWeight: FontWeight.w400,
   color: Color(0xff373737),
 );
+
+BoxDecoration listBorder() {
+  return BoxDecoration(
+    border: Border(
+      bottom: BorderSide(
+        width: 1.0,
+        color: Color(0xFFEEEEEE),
+      ),
+    ),
+  );
+}
