@@ -3,9 +3,10 @@ import 'package:meelz/view/kartica/widgets/kartica_bez_slike.dart';
 import 'package:meelz/view/kartica/widgets/kartica_sa_slikom.dart';
 
 class OrderKartica extends StatefulWidget {
-  String title, subtitle, cijena, image;
+  String title, subtitle, cijena, image, status;
 
-  OrderKartica(this.title, this.subtitle, this.cijena, this.image);
+  OrderKartica(this.title, this.subtitle, this.cijena, this.image, this.status);
+
   @override
   _OrderKarticaState createState() => _OrderKarticaState();
 }
@@ -31,6 +32,7 @@ class _OrderKarticaState extends State<OrderKartica> {
                 naslov: widget.title,
                 podnaslov: widget.subtitle,
                 cijena: widget.cijena,
+                status: widget.status,
               ),
       ),
     );

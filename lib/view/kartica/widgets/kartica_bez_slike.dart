@@ -11,10 +11,12 @@ class KarticaBezSlike extends StatelessWidget {
     @required this.naslov,
     @required this.podnaslov,
     @required this.cijena,
+    @required this.status,
   }) : super(key: key);
   final String naslov;
   final String podnaslov;
   final String cijena;
+  final String status;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,7 +36,7 @@ class KarticaBezSlike extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 5.0),
                 child: Column(
                   children: <Widget>[
-                    PendingChip(),
+                    PendingChip(status),
                   ],
                 ),
               ),

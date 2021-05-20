@@ -33,6 +33,14 @@ final TextStyle stilPending = TextStyle(
   color: Color(0xff68572D),
 );
 
+final TextStyle stilShipped = TextStyle(
+  fontFamily: "Inter",
+  fontSize: 12,
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w500,
+  color: Color(0xffffffff),
+);
+
 final TextStyle stilDelivery = TextStyle(
   fontFamily: "Inter",
   fontSize: 12,
