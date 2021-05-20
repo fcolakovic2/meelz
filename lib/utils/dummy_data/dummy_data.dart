@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/style/styles.dart';
 import 'package:meelz/view/kartica/pages/kartica.dart';
 
 int indexPage = 0;
@@ -23,7 +24,10 @@ List<Widget> widgetsList = [
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("ss"),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 18.0),
+              child: Text("Today at 15:15", style: stilDatuma),
+            ),
             cardsList[counter],
           ],
         ),
