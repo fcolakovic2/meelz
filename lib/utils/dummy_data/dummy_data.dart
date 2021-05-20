@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/view/kartica/pages/custom_card.dart';
+import 'package:meelz/view/card_custom/pages/custom_card.dart';
 import 'package:meelz/view/orders_screen/widgets/listview_custom.dart';
 
 int indexPage = 0;
