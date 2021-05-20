@@ -17,6 +17,7 @@ List<OrderKartica> cardsList = [
 
 List<Widget> widgetsList = [
   NotificationListener<OverscrollIndicatorNotification>(
+    // ignore: missing_return
     onNotification: (overscroll) {
       overscroll.disallowGlow();
     },
@@ -40,6 +41,7 @@ List<Widget> widgetsList = [
     ),
   ),
   NotificationListener<OverscrollIndicatorNotification>(
+    // ignore: missing_return
     onNotification: (overscroll) {
       overscroll.disallowGlow();
     },
@@ -65,6 +67,7 @@ List<Widget> widgetsList = [
     ),
   ),
   NotificationListener<OverscrollIndicatorNotification>(
+    // ignore: missing_return
     onNotification: (overscroll) {
       overscroll.disallowGlow();
     },

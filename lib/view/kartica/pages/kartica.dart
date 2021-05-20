@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meelz/view/kartica/widgets/kartica_bez_slike.dart';
 import 'package:meelz/view/kartica/widgets/kartica_sa_slikom.dart';
 
+// ignore: must_be_immutable
 class OrderKartica extends StatefulWidget {
   String title, subtitle, cijena, image, status;
 

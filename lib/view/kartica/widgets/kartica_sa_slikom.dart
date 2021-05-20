@@ -9,14 +9,12 @@ class KarticaSaSlikom extends StatelessWidget {
     @required this.subnaslov,
     @required this.srcslike,
     @required this.cijena,
-    @required this.status,
   }) : super(key: key);
 
   final String naslov;
   final String subnaslov;
   final String srcslike;
   final String cijena;
-  final String status;
 
   @override
   Widget build(BuildContext context) {
