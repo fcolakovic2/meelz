@@ -4,12 +4,15 @@ import 'package:meelz/view/order_details_screen/widgets/app_bar_custom.dart';
 import 'package:meelz/view/order_details_screen/widgets/list_details.dart';
 
 class OrderDetails extends StatefulWidget {
-  String title, status, cijena, deliveryDateStr;
+  String title, status, cijena, deliveryDateStr, deliveryDateStrTitle;
   DateTime deliveryDate;
 
   OrderDetails(this.title, this.status, this.deliveryDate, this.cijena) {
     deliveryDateStr =
         DateFormat('MMM ${deliveryDate.day}, yyyy').format(deliveryDate);
+    deliveryDateStrTitle = DateFormat('kk:mm').format(deliveryDate);
+
+    deliveryDateStrTitle = deliveryDateStr + " at " + deliveryDateStrTitle;
   }
 
   @override
@@ -20,7 +23,7 @@ class _OrderDetailsState extends State<OrderDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarCustom2("text"),
+      appBar: appBarCustom2(widget.deliveryDateStrTitle),
       body: ListDetails(
           widget.title, widget.status, widget.cijena, widget.deliveryDateStr),
     );

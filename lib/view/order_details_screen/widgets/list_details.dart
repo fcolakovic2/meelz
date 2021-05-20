@@ -6,12 +6,14 @@ class ListDetails extends StatelessWidget {
   List<String> attributes;
 
   ListDetails(title, status, cijena, deliveryDateStr) {
-    attributes.add(status);
-    attributes.add(title);
-    attributes.add("Home");
-    attributes.add(deliveryDateStr);
-    attributes.add(cijena);
-    attributes.add("Download");
+    attributes = [
+      status == "Pending" ? status = "Delivery expected" : status = "Delivered",
+      title.split(" ")[1],
+      "Home",
+      deliveryDateStr,
+      cijena,
+      "Download"
+    ];
   }
 
   @override
@@ -21,8 +23,11 @@ class ListDetails extends StatelessWidget {
       child: ListView(
         children: List<Widget>.generate(
           attributes.length,
-          (counter) =>
-              listDetailsRow(listDetailsLeft[counter], attributes[counter]),
+          (counter) => Padding(
+            padding: const EdgeInsets.only(bottom: 18.0),
+            child:
+                listDetailsRow(listDetailsLeft[counter], attributes[counter]),
+          ),
         ),
       ),
     );

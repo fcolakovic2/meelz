@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/view/orders_screen/pages/orders_screen.dart';
 
 class IconBack extends StatelessWidget {
   @override
@@ -15,7 +16,14 @@ class IconBack extends StatelessWidget {
           color: Color(0xff373737),
           size: 18.0,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (_) => OrdersScreen(),
+            ),
+          );
+        },
       ),
     );
   }
