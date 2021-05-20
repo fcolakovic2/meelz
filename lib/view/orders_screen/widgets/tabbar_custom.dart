@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/providers/page_index.dart';
 import 'package:meelz/utils/style/styles.dart';
-import 'package:meelz/view/orders_screen/widgets/m2dindicator.dart';
+import 'package:meelz/utils/style/m2dindicator.dart';
 import 'package:meelz/view/orders_screen/widgets/tab_element.dart';
 import 'package:provider/provider.dart';
 
