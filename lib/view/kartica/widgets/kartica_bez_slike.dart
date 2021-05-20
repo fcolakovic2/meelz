@@ -28,7 +28,7 @@ class KarticaBezSlike extends StatelessWidget {
         ),
         PodnaslovBezSlike(podnaslov: podnaslov),
         Padding(
-          padding: const EdgeInsets.fromLTRB(18.0, 10.0, 20.0, 20),
+          padding: const EdgeInsets.fromLTRB(18.0, 0, 20.0, 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[

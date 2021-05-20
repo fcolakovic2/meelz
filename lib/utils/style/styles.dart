@@ -62,7 +62,7 @@ final TextStyle stilPodnaslova = TextStyle(
   fontSize: 14,
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
-  color: Color(0xff373737).withOpacity(0.8),
+  color: Color(0xff373737).withOpacity(0.6),
 );
 
 final TextStyle stilCijene = TextStyle(

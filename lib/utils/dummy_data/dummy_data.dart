@@ -16,62 +16,77 @@ List<OrderKartica> cardsList = [
 ];
 
 List<Widget> widgetsList = [
-  ListView(
-    children: List<Widget>.generate(
-      cardsList.length,
-      (counter) => Padding(
-        padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: Text("TODAY AT 15:15", style: stilDatuma),
-            ),
-            cardsList[counter],
-          ],
+  NotificationListener<OverscrollIndicatorNotification>(
+    onNotification: (overscroll) {
+      overscroll.disallowGlow();
+    },
+    child: ListView(
+      children: List<Widget>.generate(
+        cardsList.length,
+        (counter) => Padding(
+          padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10.0),
+                child: Text("TODAY AT 15:15", style: stilDatuma),
+              ),
+              cardsList[counter],
+            ],
+          ),
         ),
       ),
     ),
   ),
-  ListView(
-    children: List<Widget>.generate(
-      cardsList.length,
-      (counter) => cardsList[counter].status == "Pending"
-          ? Padding(
-              padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 10.0),
-                    child: Text("TODAY AT 15:15", style: stilDatuma),
-                  ),
-                  cardsList[counter],
-                ],
-              ),
-            )
-          : Container(),
+  NotificationListener<OverscrollIndicatorNotification>(
+    onNotification: (overscroll) {
+      overscroll.disallowGlow();
+    },
+    child: ListView(
+      children: List<Widget>.generate(
+        cardsList.length,
+        (counter) => cardsList[counter].status == "Pending"
+            ? Padding(
+                padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0),
+                      child: Text("TODAY AT 15:15", style: stilDatuma),
+                    ),
+                    cardsList[counter],
+                  ],
+                ),
+              )
+            : Container(),
+      ),
     ),
   ),
-  ListView(
-    children: List<Widget>.generate(
-      cardsList.length,
-      (counter) => cardsList[counter].status == "Shipped"
-          ? Padding(
-              padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 10.0),
-                    child: Text("TODAY AT 15:15", style: stilDatuma),
-                  ),
-                  cardsList[counter],
-                ],
-              ),
-            )
-          : Container(),
+  NotificationListener<OverscrollIndicatorNotification>(
+    onNotification: (overscroll) {
+      overscroll.disallowGlow();
+    },
+    child: ListView(
+      children: List<Widget>.generate(
+        cardsList.length,
+        (counter) => cardsList[counter].status == "Shipped"
+            ? Padding(
+                padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0),
+                      child: Text("TODAY AT 15:15", style: stilDatuma),
+                    ),
+                    cardsList[counter],
+                  ],
+                ),
+              )
+            : Container(),
+      ),
     ),
   ),
 ];

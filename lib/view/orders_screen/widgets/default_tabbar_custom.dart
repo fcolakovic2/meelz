@@ -26,6 +26,7 @@ Column tabBarSlider(ordersList, widgetsList, [widgetsBefore]) {
         child: Padding(
           padding: const EdgeInsets.only(left: 0.0, right: 0.0),
           child: TabBarView(
+            physics: BouncingScrollPhysics(),
             children: List<Widget>.generate(
               widgetsList.length,
               (counter) => widgetsList[counter],
