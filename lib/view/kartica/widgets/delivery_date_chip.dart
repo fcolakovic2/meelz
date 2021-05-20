@@ -10,7 +10,10 @@ class DeliveryDateChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Chip(
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(6))),
+        borderRadius: BorderRadius.all(
+          Radius.circular(6),
+        ),
+      ),
       backgroundColor: Color(0xffF6F6F6),
       label: date.isBefore(DateTime.now())
           ? Text(

@@ -12,7 +12,8 @@ class OrderKartica extends StatefulWidget {
       this.orderDate, this.deliveryDate) {
     dateOrderStr =
         DateFormat('MMM ${orderDate.day}, yyyy – kk:mm').format(orderDate);
-    deliveryDateStr = DateFormat('MMM ${orderDate.day}').format(deliveryDate);
+    deliveryDateStr =
+        DateFormat('MMM ${deliveryDate.day}').format(deliveryDate);
   }
 
   @override
