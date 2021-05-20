@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/view/orders_screen/widgets/card_custom/pages/custom_card.dart';
+import 'package:meelz/view/card_custom/pages/custom_card.dart';
 import 'package:meelz/view/orders_screen/widgets/listview_custom.dart';
 
 int indexPage = 0;
 
 List<String> tabList = ["ALL ORDERS", "PENDING", "SHIPPED"];
+
+List<String> listDetailsLeft = [
+  "Status",
+  "Orders",
+  "Delivery address",
+  "Delivery date",
+  "Total price",
+  "Payment receipt"
+];
 
 List<CustomCard> cardsList = [
   CustomCard(

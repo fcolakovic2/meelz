@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:meelz/view/order_details_screen/pages/order_details.dart';
 import 'package:meelz/providers/page_index.dart';
+import 'package:meelz/view/orders_screen/pages/orders_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Inter',
         primarySwatch: Colors.blue,
       ),
-      home: OrderDetails(),
+      home: OrdersScreen(),
     );
   }
 }
