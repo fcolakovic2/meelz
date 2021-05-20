@@ -5,12 +5,14 @@ import 'package:meelz/view/kartica/widgets/kartica_sa_slikom.dart';
 
 // ignore: must_be_immutable
 class OrderKartica extends StatefulWidget {
-  String title, subtitle, cijena, image, status, datumStr;
-  DateTime datum;
+  String title, subtitle, cijena, image, status, dateOrderStr, deliveryDateStr;
+  DateTime orderDate, deliveryDate;
 
   OrderKartica(this.title, this.subtitle, this.cijena, this.image, this.status,
-      this.datum) {
-    datumStr = DateFormat('MMM ${datum.day}, yyyy – kk:mm').format(datum);
+      this.orderDate, this.deliveryDate) {
+    dateOrderStr =
+        DateFormat('MMM ${orderDate.day}, yyyy – kk:mm').format(orderDate);
+    deliveryDateStr = DateFormat('MMM ${orderDate.day}').format(deliveryDate);
   }
 
   @override
@@ -41,6 +43,8 @@ class _OrderKarticaState extends State<OrderKartica> {
                 podnaslov: widget.subtitle,
                 cijena: widget.cijena,
                 status: widget.status,
+                dateStr: widget.deliveryDateStr,
+                date: widget.deliveryDate,
               ),
       ),
     );

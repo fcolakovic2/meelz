@@ -12,11 +12,17 @@ class KarticaBezSlike extends StatelessWidget {
     @required this.podnaslov,
     @required this.cijena,
     @required this.status,
+    @required this.dateStr,
+    @required this.date,
   }) : super(key: key);
+
   final String naslov;
   final String podnaslov;
   final String cijena;
   final String status;
+  final String dateStr;
+  final DateTime date;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -42,7 +48,7 @@ class KarticaBezSlike extends StatelessWidget {
               ),
               Column(
                 children: <Widget>[
-                  DeliveryDateChip(),
+                  DeliveryDateChip(date, dateStr),
                 ],
               ),
               Spacer(),

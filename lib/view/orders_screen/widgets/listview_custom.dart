@@ -21,14 +21,14 @@ NotificationListener<OverscrollIndicatorNotification> listViewCustomShipped(
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10.0),
-                      child: cardsList[counter].datum.year !=
+                      child: cardsList[counter].orderDate.year !=
                                   DateTime.now().year ||
-                              cardsList[counter].datum.month !=
+                              cardsList[counter].orderDate.month !=
                                   DateTime.now().month
-                          ? Text("${cardsList[counter].datumStr}",
+                          ? Text("${cardsList[counter].dateOrderStr}",
                               style: stilDatuma)
                           : Text(
-                              "TODAY AT ${DateFormat('kk:mm').format(cardsList[counter].datum)}",
+                              "TODAY AT ${DateFormat('kk:mm').format(cardsList[counter].orderDate)}",
                               style: stilDatuma),
                     ),
                     cardsList[counter],
@@ -59,14 +59,14 @@ NotificationListener<OverscrollIndicatorNotification> listViewCustomPending(
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10.0),
-                      child: cardsList[counter].datum.year !=
+                      child: cardsList[counter].orderDate.year !=
                                   DateTime.now().year ||
-                              cardsList[counter].datum.month !=
+                              cardsList[counter].orderDate.month !=
                                   DateTime.now().month
-                          ? Text("${cardsList[counter].datumStr}",
+                          ? Text("${cardsList[counter].dateOrderStr}",
                               style: stilDatuma)
                           : Text(
-                              "TODAY AT ${DateFormat('kk:mm').format(cardsList[counter].datum)}",
+                              "TODAY AT ${DateFormat('kk:mm').format(cardsList[counter].orderDate)}",
                               style: stilDatuma),
                     ),
                     cardsList[counter],
@@ -96,11 +96,14 @@ NotificationListener<OverscrollIndicatorNotification> listViewCustomAll(
             children: [
               Padding(
                 padding: const EdgeInsets.only(bottom: 10.0),
-                child: cardsList[counter].datum.year != DateTime.now().year ||
-                        cardsList[counter].datum.month != DateTime.now().month
-                    ? Text("${cardsList[counter].datumStr}", style: stilDatuma)
+                child: cardsList[counter].orderDate.year !=
+                            DateTime.now().year ||
+                        cardsList[counter].orderDate.month !=
+                            DateTime.now().month
+                    ? Text("${cardsList[counter].dateOrderStr}",
+                        style: stilDatuma)
                     : Text(
-                        "TODAY AT ${DateFormat('kk:mm').format(cardsList[counter].datum)}",
+                        "TODAY AT ${DateFormat('kk:mm').format(cardsList[counter].orderDate)}",
                         style: stilDatuma),
               ),
               cardsList[counter],
