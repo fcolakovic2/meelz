@@ -20,13 +20,13 @@ List<Widget> widgetsList = [
     children: List<Widget>.generate(
       cardsList.length,
       (counter) => Padding(
-        padding: const EdgeInsets.only(top: 47.0, right: 20, left: 20),
+        padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(bottom: 18.0),
-              child: Text("Today at 15:15", style: stilDatuma),
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: Text("TODAY AT 15:15", style: stilDatuma),
             ),
             cardsList[counter],
           ],
