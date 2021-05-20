@@ -16,9 +16,11 @@ class _OrderKarticaState extends State<OrderKartica> {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
+        elevation: 0.0,
         shape: widget.image == ""
             ? RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0),
+                side: BorderSide(width: 1, color: Color(0xffEEEEEE)),
               )
             : RoundedRectangleBorder(),
         child: widget.image != ""

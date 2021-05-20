@@ -39,11 +39,14 @@ List<Widget> widgetsList = [
       cardsList.length,
       (counter) => cardsList[counter].status == "Pending"
           ? Padding(
-              padding: const EdgeInsets.only(top: 47.0, right: 20, left: 20),
+              padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("ss"),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10.0),
+                    child: Text("TODAY AT 15:15", style: stilDatuma),
+                  ),
                   cardsList[counter],
                 ],
               ),
@@ -56,11 +59,14 @@ List<Widget> widgetsList = [
       cardsList.length,
       (counter) => cardsList[counter].status == "Shipped"
           ? Padding(
-              padding: const EdgeInsets.only(top: 47.0, right: 20, left: 20),
+              padding: const EdgeInsets.only(top: 25.0, right: 20, left: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("ss"),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10.0),
+                    child: Text("TODAY AT 15:15", style: stilDatuma),
+                  ),
                   cardsList[counter],
                 ],
               ),
