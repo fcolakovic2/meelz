@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/dummy_data/dummy_data.dart';
-import 'package:meelz/utils/style/styles.dart';
+import 'package:meelz/view/order_details_screen/widgets/list_details_row.dart';
 
 class ListDetails extends StatelessWidget {
   List<String> attributes;
@@ -28,28 +28,6 @@ class ListDetails extends StatelessWidget {
             child:
                 listDetailsRow(listDetailsLeft[counter], attributes[counter]),
           ),
-        ),
-      ),
-    );
-  }
-
-  Container listDetailsRow(leftElement, rightElement) {
-    return Container(
-      decoration: listBorder(),
-      child: Padding(
-        padding: const EdgeInsets.only(bottom: 18.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              leftElement,
-              style: styleListItems,
-            ),
-            Text(
-              rightElement,
-              style: styleListItems,
-            ),
-          ],
         ),
       ),
     );

@@ -23,6 +23,7 @@ class _OrderDetailsState extends State<OrderDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: appBarCustom2(widget.deliveryDateStrTitle),
       body: ListDetails(
           widget.title, widget.status, widget.cijena, widget.deliveryDateStr),

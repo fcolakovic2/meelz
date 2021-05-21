@@ -97,6 +97,14 @@ final TextStyle styleListItems = TextStyle(
   color: Color(0xff373737),
 );
 
+final TextStyle styleListItemsBold = TextStyle(
+  fontSize: 16,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  color: Color(0xff373737),
+);
+
 BoxDecoration listBorder() {
   return BoxDecoration(
     border: Border(
