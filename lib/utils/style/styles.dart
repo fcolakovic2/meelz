@@ -88,3 +88,19 @@ final TextStyle rateThisOrder = TextStyle(
   fontWeight: FontWeight.w500,
   color: Color(0xff68572D),
 );
+
+final TextStyle stilNaslovaPaymenta = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.bold,
+  color: Color(0xff373737),
+);
+
+final TextStyle stilVisa = TextStyle(
+  fontSize: 13,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.normal,
+  color: Color(0xff373737),
+);
