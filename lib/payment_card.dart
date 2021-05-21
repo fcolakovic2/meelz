@@ -12,6 +12,7 @@ class PaymentKartica extends StatelessWidget {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Row(children: <Widget>[
             Padding(
