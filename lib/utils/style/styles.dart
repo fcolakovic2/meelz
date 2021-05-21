@@ -104,3 +104,27 @@ final TextStyle stilVisa = TextStyle(
   fontWeight: FontWeight.normal,
   color: Color(0xff373737),
 );
+
+final TextStyle orderDelVAT = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  color: Color(0xff373737).withOpacity(0.7),
+);
+
+final TextStyle total = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.bold,
+  color: Color(0xff373737),
+);
+
+final TextStyle totalnoopacity = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  color: Color(0xff373737),
+);
