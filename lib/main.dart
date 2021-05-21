@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: appBarCustom2("Test"),
-        body: customButton(),
+        body: customButton(context),
       ),
     );
     /* return MaterialApp(

@@ -80,3 +80,11 @@ final TextStyle stilNaslovaAppBar = TextStyle(
   fontWeight: FontWeight.w700,
   color: Color(0xff373737),
 );
+
+final TextStyle rateThisOrder = TextStyle(
+  fontSize: 16,
+  fontFamily: "Inter",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w500,
+  color: Color(0xff68572D),
+);

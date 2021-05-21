@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/style/styles.dart';
 
-TextButton customButton() {
+TextButton customButton(BuildContext context) {
   return TextButton(
-    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.red)),
+    style: ButtonStyle(
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        )),
+        backgroundColor: MaterialStateProperty.all(Color(0xffFFDF36))),
     onPressed: () {},
     child: Padding(
       padding: EdgeInsets.all(10),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Icon(
-            Icons.thumb_up,
-            color: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(right: 6.0),
+            child: Icon(
+              Icons.thumb_up_outlined,
+              color: Color(0xff68572D),
+            ),
           ),
           Text(
             'Rate this order',
-            style: TextStyle(
-              fontSize: 25,
-            ),
+            style: rateThisOrder,
           ),
         ],
       ),
