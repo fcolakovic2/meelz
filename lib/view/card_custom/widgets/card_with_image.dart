@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/view/kartica/widgets/price_image.dart';
-import 'package:meelz/view/kartica/widgets/title_subtitle_with_image.dart';
+import 'package:meelz/view/card_custom/widgets/price_image.dart';
+import 'package:meelz/view/card_custom/widgets/title_subtitle_with_image.dart';
 
 class CardWithImage extends StatelessWidget {
   const CardWithImage({

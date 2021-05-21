@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/view/kartica/widgets/price_without_image.dart';
-import 'package:meelz/view/kartica/widgets/delivery_date_chip.dart';
-import 'package:meelz/view/kartica/widgets/title_dots_without_image.dart';
-import 'package:meelz/view/kartica/widgets/pending_chip.dart';
-import 'package:meelz/view/kartica/widgets/subtitle_without_image.dart';
+import 'package:meelz/view/card_custom/widgets/delivery_date_chip.dart';
+import 'package:meelz/view/card_custom/widgets/pending_chip.dart';
+import 'package:meelz/view/card_custom/widgets/price_without_image.dart';
+import 'package:meelz/view/card_custom/widgets/subtitle_without_image.dart';
+import 'package:meelz/view/card_custom/widgets/title_dots_without_image.dart';
 
 class CardWithoutImage extends StatelessWidget {
   const CardWithoutImage({

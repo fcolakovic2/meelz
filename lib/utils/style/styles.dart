@@ -80,3 +80,46 @@ final TextStyle stilDatuma = TextStyle(
   fontWeight: FontWeight.w500,
   color: Color(0xff373737).withOpacity(0.6),
 );
+
+final TextStyle stilNaslovaAppBar = TextStyle(
+  fontSize: 26,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  color: Color(0xff373737),
+);
+
+final TextStyle styleListItems = TextStyle(
+  fontSize: 16,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  color: Color(0xff373737),
+);
+
+final TextStyle styleListItemsBold = TextStyle(
+  fontSize: 16,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  color: Color(0xff373737),
+);
+
+BoxDecoration listBorder() {
+  return BoxDecoration(
+    border: Border(
+      bottom: BorderSide(
+        width: 1.0,
+        color: Color(0xFFEEEEEE),
+      ),
+    ),
+  );
+}
+
+final TextStyle rateThisOrder = TextStyle(
+  fontSize: 16,
+  fontFamily: "Inter",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w500,
+  color: Color(0xff68572D),
+);
