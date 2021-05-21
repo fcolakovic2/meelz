@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:meelz/view/order_details_screen/widgets/app_bar_custom.dart';
+import 'package:meelz/view/order_details_screen/widgets/customButton.dart';
 import 'package:meelz/view/order_details_screen/widgets/list_details.dart';
 
 class OrderDetails extends StatefulWidget {
@@ -25,8 +26,16 @@ class _OrderDetailsState extends State<OrderDetails> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: appBarCustom2(widget.deliveryDateStrTitle),
-      body: ListDetails(
-          widget.title, widget.status, widget.cijena, widget.deliveryDateStr),
+      body: Column(
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height * 0.46,
+            child: ListDetails(widget.title, widget.status, widget.cijena,
+                widget.deliveryDateStr),
+          ),
+          customButton(context),
+        ],
+      ),
     );
   }
 }

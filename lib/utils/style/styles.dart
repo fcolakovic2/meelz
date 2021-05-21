@@ -115,3 +115,11 @@ BoxDecoration listBorder() {
     ),
   );
 }
+
+final TextStyle rateThisOrder = TextStyle(
+  fontSize: 16,
+  fontFamily: "Inter",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w500,
+  color: Color(0xff68572D),
+);
