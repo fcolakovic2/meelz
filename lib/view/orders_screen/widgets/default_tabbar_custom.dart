@@ -9,7 +9,7 @@ DefaultTabController defaultTabBarCustom(tabList, widgetsList, appBar,
       appBar: appBar,
       backgroundColor: Colors.grey[150],
       body: SafeArea(
-        child: tabBarSlider(tabList, widgetsList),
+        child: tabBarSlider(tabList, widgetsList, widgetsBefore),
       ),
     ),
   );

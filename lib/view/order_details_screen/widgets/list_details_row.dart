@@ -5,7 +5,8 @@ import 'package:meelz/view/order_details_screen/widgets/row_with_status.dart';
 
 Container listDetailsRow(leftElement, rightElement) {
   return Container(
-    decoration: listBorder(),
+    decoration:
+        leftElement != "Payment receipt" ? listBorder() : BoxDecoration(),
     child: Padding(
       padding: const EdgeInsets.only(bottom: 18.0),
       child: Row(
