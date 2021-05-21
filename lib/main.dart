@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:meelz/app_bar_custom.dart';
+import 'package:meelz/customButton.dart';
 import 'package:meelz/providers/page_index.dart';
 import 'package:meelz/view/orders_screen/pages/orders_screen.dart';
 import 'package:meelz/view/orders_screen/widgets/appbar.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: appBarCustom2("Test"),
+        body: customButton(),
       ),
     );
     /* return MaterialApp(
