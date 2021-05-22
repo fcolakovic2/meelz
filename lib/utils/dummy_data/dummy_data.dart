@@ -20,7 +20,7 @@ List<String> listDetailsLeft = [
 List<CustomCard> cardsList = [
   CustomCard(
     "Orders #13424",
-    "Meat lovers 2, Coffe 2, Drinks 3",
+    productsDetails,
     "AED 150",
     "",
     "Pending",
@@ -31,7 +31,7 @@ List<CustomCard> cardsList = [
   ),
   CustomCard(
     "Order #32324",
-    "Meat lovers 2, Coffe 2, Drinks 3",
+    productsDetails,
     "AED 250",
     "",
     "Shipped",
@@ -40,7 +40,7 @@ List<CustomCard> cardsList = [
   ),
   CustomCard(
     "Order #22525",
-    "Meat lovers 2, Coffe 2, Drinks 3",
+    productsDetails,
     "AED 220",
     "",
     "Shipped",
@@ -56,6 +56,45 @@ List<Widget> widgetsList = [
 ];
 
 List<Widget> widgetsListDetails = [
+  ListView(
+    children: [
+      Padding(
+        padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
+        child: CustomCard(
+          "Order #22525",
+          productsDetails,
+          "AED 220",
+          "assets/images/Rectangle711.png",
+          "Shipped",
+          DateTime(2021, 1, 25, 13, 35),
+          DateTime(2021, 1, 12, 12, 34),
+        ),
+      ),
+    ],
+  ),
   Icon(Icons.car_rental),
-  Icon(Icons.car_rental),
+];
+
+var productsDetails = [
+  {
+    'title': 'Meat Lovers',
+    'description': 'BlenderMix system for ultra-fine blen sadasd',
+    'quantity': '2',
+    'price': '50',
+    'img': 'assets/images/Rectangle711.png'
+  },
+  {
+    'title': 'Coffe',
+    'description': 'BlenderMix system for ultra-fine blen sadasd',
+    'quantity': '2',
+    'price': '50',
+    'img': 'assets/images/Rectangle711.png'
+  },
+  {
+    'title': 'Drinks',
+    'description': 'BlenderMix system for ultra-fine blen sadasd',
+    'quantity': '3',
+    'price': '50',
+    'img': 'assets/images/Rectangle711.png'
+  },
 ];

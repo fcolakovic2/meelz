@@ -6,22 +6,26 @@ import 'package:meelz/view/card_custom/widgets/subtitle_without_image.dart';
 import 'package:meelz/view/card_custom/widgets/title_dots_without_image.dart';
 
 class CardWithoutImage extends StatelessWidget {
-  const CardWithoutImage({
-    Key key,
-    @required this.naslov,
-    @required this.podnaslov,
-    @required this.cijena,
-    @required this.status,
-    @required this.dateStr,
-    @required this.date,
-  }) : super(key: key);
-
   final String naslov;
-  final String podnaslov;
+  String subTitleStr;
   final String cijena;
   final String status;
   final String dateStr;
   final DateTime date;
+
+  var subTitleList;
+
+  CardWithoutImage(this.naslov, this.subTitleList, this.cijena, this.status,
+      this.dateStr, this.date) {
+    subTitleStr = "";
+    for (var i = 0; i < subTitleList.length; i++) {
+      subTitleStr = subTitleStr +
+          subTitleList[i]['title'] +
+          " " +
+          subTitleList[i]['quantity'] +
+          ", ";
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +36,7 @@ class CardWithoutImage extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 8.0),
           child: TitleDots(naslov: naslov),
         ),
-        SubtitleWithoutImage(podnaslov: podnaslov),
+        SubtitleWithoutImage(podnaslov: subTitleStr),
         Padding(
           padding: const EdgeInsets.fromLTRB(18.0, 0, 20.0, 20),
           child: Row(

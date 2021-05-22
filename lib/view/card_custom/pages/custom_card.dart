@@ -6,11 +6,12 @@ import 'package:meelz/view/order_details_screen/pages/order_details.dart';
 
 // ignore: must_be_immutable
 class CustomCard extends StatefulWidget {
-  String title, subtitle, cijena, image, status, dateOrderStr, deliveryDateStr;
+  String title, cijena, image, status, dateOrderStr, deliveryDateStr;
+  var subTitleList;
   DateTime orderDate, deliveryDate;
 
-  CustomCard(this.title, this.subtitle, this.cijena, this.image, this.status,
-      this.orderDate, this.deliveryDate) {
+  CustomCard(this.title, this.subTitleList, this.cijena, this.image,
+      this.status, this.orderDate, this.deliveryDate) {
     dateOrderStr =
         DateFormat('MMM ${orderDate.day}, yyyy – kk:mm').format(orderDate);
     deliveryDateStr =
@@ -26,37 +27,40 @@ class _CustomCardState extends State<CustomCard> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (_) => OrderDetails(widget.title, widget.status,
-                widget.deliveryDate, widget.cijena),
-          ),
-        );
+        widget.image == ""
+            ? Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => OrderDetails(widget.title, widget.status,
+                      widget.deliveryDate, widget.cijena),
+                ),
+              )
+            : null;
       },
       child: Center(
         child: Card(
           elevation: 0.0,
-          shape: widget.image == ""
-              ? RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0),
-                  side: BorderSide(width: 1, color: Color(0xffEEEEEE)),
-                )
-              : RoundedRectangleBorder(),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+            side: BorderSide(
+              width: widget.image == "" ? 1 : 0,
+              color: Color(0xffEEEEEE),
+            ),
+          ),
           child: widget.image != ""
               ? CardWithImage(
-                  naslov: widget.title,
-                  subnaslov: widget.subtitle,
-                  srcslike: widget.image,
-                  cijena: widget.cijena,
+                  widget.title,
+                  widget.subTitleList,
+                  widget.image,
+                  widget.cijena,
                 )
               : CardWithoutImage(
-                  naslov: widget.title,
-                  podnaslov: widget.subtitle,
-                  cijena: widget.cijena,
-                  status: widget.status,
-                  dateStr: widget.deliveryDateStr,
-                  date: widget.deliveryDate,
+                  widget.title,
+                  widget.subTitleList,
+                  widget.cijena,
+                  widget.status,
+                  widget.deliveryDateStr,
+                  widget.deliveryDate,
                 ),
         ),
       ),

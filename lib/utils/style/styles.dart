@@ -89,6 +89,22 @@ final TextStyle stilNaslovaAppBar = TextStyle(
   color: Color(0xff373737),
 );
 
+final TextStyle cardLeftTitleDetails = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  color: Color(0xff373737),
+);
+
+final TextStyle cardRightTitleDetails = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  color: Color(0xff373737),
+);
+
 final TextStyle styleListItems = TextStyle(
   fontSize: 16,
   fontFamily: "Averta",
