@@ -1,49 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/view/card_custom/widgets/price_image.dart';
-import 'package:meelz/view/card_custom/widgets/title_subtitle_with_image.dart';
+import 'package:meelz/utils/style/styles.dart';
+import 'package:meelz/view/card_custom/widgets/bottom_row_card.dart';
+import 'package:meelz/view/card_custom/widgets/card_with_image_element.dart';
+import 'package:meelz/view/card_custom/widgets/upper_row_card.dart';
 
+// ignore: must_be_immutable
 class CardWithImage extends StatelessWidget {
-  const CardWithImage({
-    Key key,
-    @required this.naslov,
-    @required this.subnaslov,
-    @required this.srcslike,
-    @required this.cijena,
-  }) : super(key: key);
-
   final String naslov;
-  final String subnaslov;
+  String subTitleStr;
   final String srcslike;
   final String cijena;
+  var subTitleList;
+
+  CardWithImage(this.naslov, this.subTitleList, this.srcslike, this.cijena) {
+    subTitleStr = "";
+    for (var i = 0; i < subTitleList.length; i++) {
+      subTitleStr = subTitleStr +
+          subTitleList[i]['title'] +
+          " " +
+          subTitleList[i]['quantity'] +
+          ", ";
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.only(top: 15.0, left: 15.0, bottom: 1.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
+    return Container(
+      decoration: buildBoxDecoration(),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Column(
+            children: [
+              UpperRowCard(naslov: naslov, srcslike: srcslike),
               Column(
-                children: <Widget>[
-                  Container(
-                    height: 40,
-                    child: Image.asset(srcslike),
-                  ),
-                ],
+                children: cardWithImageElement(subTitleList),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 13.0),
-                child: TitleSubtitleWithImage(
-                    naslov: naslov, subnaslov: subnaslov),
-              ),
+              BottomRowCard(),
             ],
           ),
-        ),
-        PriceImage(cijena: cijena)
-      ],
+        ],
+      ),
     );
   }
 }

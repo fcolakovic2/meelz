@@ -25,11 +25,11 @@ class TitleDots extends StatelessWidget {
             ),
           ],
         ),
-        Column(
-          children: <Widget>[
-            Icon(Icons.more_vert),
-          ],
-        ),
+        // Column(
+        //   children: <Widget>[
+        //     Icon(Icons.more_vert),
+        //   ],
+        // ),
       ],
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meelz/utils/style/styles.dart';
 
 Row listLogic(leftElement, rightElement) {
@@ -20,12 +21,7 @@ Row listLogic(leftElement, rightElement) {
                   color: Colors.transparent,
                   child: InkWell(
                     splashColor: Colors.blue[100],
-                    child: const Icon(
-                      Icons.file_download,
-                      color: Color(0xFF1CBD8D),
-                    ),
-                    // ikona eksportovana
-                    //Image.asset('assets/images/Group.png'),
+                    child: SvgPicture.asset("assets/images/Group2313.svg"),
                     onTap: () {
                       print("tapped");
                     },
@@ -37,19 +33,11 @@ Row listLogic(leftElement, rightElement) {
               ? Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Container(
-                    // height: 26,
-                    // width: 26,
                     child: Material(
                       color: Colors.transparent,
                       child: InkWell(
                         splashColor: Colors.blue[100],
-                        child: const Icon(
-                          Icons.north_east_rounded,
-                          color: Color(0xFF1CBD8D),
-                          size: 20,
-                        ),
-                        // ikona exportovana
-                        // child: Image.asset('assets/images/Vector.png'),
+                        child: SvgPicture.asset("assets/images/Vectornew.svg"),
                         onTap: () {
                           print("tapped");
                         },

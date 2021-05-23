@@ -89,11 +89,42 @@ final TextStyle stilNaslovaAppBar = TextStyle(
   color: Color(0xff373737),
 );
 
+final TextStyle cardLeftTitleDetails = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  color: Color(0xff373737),
+);
+
+final TextStyle cardRightTitleDetails = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  color: Color(0xff373737),
+);
+
 final TextStyle styleListItems = TextStyle(
   fontSize: 16,
   fontFamily: "Averta",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w400,
+  color: Color(0xff373737),
+);
+
+final TextStyle styleListItemsPom = TextStyle(
+  fontSize: 13,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  color: Color(0xff373737),
+);
+
+final TextStyle stylePriceBold = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta",
+  fontWeight: FontWeight.bold,
+  fontStyle: FontStyle.normal,
   color: Color(0xff373737),
 );
 
@@ -116,10 +147,62 @@ BoxDecoration listBorder() {
   );
 }
 
+BoxDecoration listBorderUp() {
+  return BoxDecoration(
+    border: Border(
+      top: BorderSide(
+        width: 1.0,
+        color: Color(0xFFEEEEEE),
+      ),
+    ),
+  );
+}
+
+BoxDecoration buildBoxDecoration() {
+  return BoxDecoration(
+    color: Colors.white,
+    borderRadius: BorderRadius.only(
+      topLeft: Radius.circular(16),
+      topRight: Radius.circular(16),
+      bottomLeft: Radius.circular(16),
+      bottomRight: Radius.circular(16),
+    ),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withOpacity(0.05),
+        spreadRadius: 0,
+        blurRadius: 5,
+        offset: Offset(3.0, 3), // changes position of shadow
+      ),
+    ],
+  );
+}
+
 final TextStyle rateThisOrder = TextStyle(
   fontSize: 16,
   fontFamily: "Inter",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
   color: Color(0xff68572D),
+);
+
+final TextStyle trackOrderLight = TextStyle(
+  fontSize: 13,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  color: Color(0xFF373737).withOpacity(0.6),
+);
+
+final TextStyle trackOrderDark = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  color: Color(0xFF373737),
+);
+
+final TextStyle trackOrderGreen = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  color: Color(0xFF1CBD8D),
 );

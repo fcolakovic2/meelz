@@ -2,28 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:meelz/utils/style/styles.dart';
 
 class TitleSubtitleWithImage extends StatelessWidget {
-  const TitleSubtitleWithImage({
-    Key key,
-    @required this.naslov,
-    @required this.subnaslov,
-  }) : super(key: key);
+  const TitleSubtitleWithImage(
+      {Key key,
+      @required this.naslov,
+      @required this.subnaslov,
+      @required this.cijena,
+      @required this.kolicina})
+      : super(key: key);
 
   final String naslov;
   final String subnaslov;
+  final String cijena;
+  final String kolicina;
 
   @override
   Widget build(BuildContext context) {
     return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(bottom: 7.0),
+          child: Text(
             naslov,
             softWrap: false,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: stilNaslova,
           ),
-          SizedBox(
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.6,
             child: Text(
               subnaslov,
@@ -33,6 +42,28 @@ class TitleSubtitleWithImage extends StatelessWidget {
               style: stilPodnaslova,
             ),
           ),
-        ]);
+        ),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.6,
+          child: kolicina != "1"
+              ? Row(
+                  children: [
+                    Text(
+                      "AED " + cijena,
+                      style: stylePriceBold,
+                    ),
+                    Text(
+                      "  x " + kolicina,
+                      style: styleListItemsPom,
+                    ),
+                  ],
+                )
+              : Text(
+                  "AED " + cijena,
+                  style: stylePriceBold,
+                ),
+        ),
+      ],
+    );
   }
 }
