@@ -5,6 +5,7 @@ import 'package:meelz/view/card_custom/widgets/price_without_image.dart';
 import 'package:meelz/view/card_custom/widgets/subtitle_without_image.dart';
 import 'package:meelz/view/card_custom/widgets/title_dots_without_image.dart';
 
+// ignore: must_be_immutable
 class CardWithoutImage extends StatelessWidget {
   final String naslov;
   String subTitleStr;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:meelz/utils/shared/animations.dart';
 import 'package:meelz/view/card_custom/widgets/card_with_image.dart';
 import 'package:meelz/view/card_custom/widgets/card_without_image.dart';
 import 'package:meelz/view/order_details_screen/pages/order_details.dart';
@@ -28,11 +29,10 @@ class _CustomCardState extends State<CustomCard> {
     return GestureDetector(
       onTap: () {
         widget.image == ""
-            ? Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => OrderDetails(widget.title, widget.status,
-                      widget.deliveryDate, widget.cijena),
+            ? Navigator.of(context).push(
+                createRouteToDown(
+                  OrderDetails(widget.title, widget.status, widget.deliveryDate,
+                      widget.cijena),
                 ),
               )
             : null;

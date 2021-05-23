@@ -1,10 +1,10 @@
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/style/styles.dart';
 import 'package:meelz/view/card_custom/widgets/bottom_row_card.dart';
 import 'package:meelz/view/card_custom/widgets/card_with_image_element.dart';
 import 'package:meelz/view/card_custom/widgets/upper_row_card.dart';
 
+// ignore: must_be_immutable
 class CardWithImage extends StatelessWidget {
   final String naslov;
   String subTitleStr;

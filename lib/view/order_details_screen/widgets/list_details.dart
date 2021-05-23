@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meelz/utils/dummy_data/dummy_data.dart';
 import 'package:meelz/view/order_details_screen/widgets/list_details_row.dart';
 
+// ignore: must_be_immutable
 class ListDetails extends StatelessWidget {
   List<String> attributes;
 

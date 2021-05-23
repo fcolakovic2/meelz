@@ -6,6 +6,7 @@ import 'package:meelz/view/order_details_screen/widgets/customButton.dart';
 import 'package:meelz/view/order_details_screen/widgets/list_details.dart';
 import 'package:meelz/view/orders_screen/widgets/default_tabbar_custom.dart';
 
+// ignore: must_be_immutable
 class OrderDetails extends StatefulWidget {
   String title, status, cijena, deliveryDateStr, deliveryDateStrTitle;
   DateTime deliveryDate;
