@@ -20,7 +20,7 @@ Row listLogic(leftElement, rightElement) {
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(
-                    splashColor: Colors.blue[100],
+                    splashColor: Colors.yellow[100],
                     child: SvgPicture.asset("assets/images/Group2313.svg"),
                     onTap: () {
                       print("tapped");
@@ -36,7 +36,7 @@ Row listLogic(leftElement, rightElement) {
                     child: Material(
                       color: Colors.transparent,
                       child: InkWell(
-                        splashColor: Colors.blue[100],
+                        splashColor: Colors.yellow[100],
                         child: SvgPicture.asset("assets/images/Vectornew.svg"),
                         onTap: () {
                           print("tapped");

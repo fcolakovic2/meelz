@@ -29,17 +29,24 @@ class BottomRowCard extends StatelessWidget {
                 )
               ],
             ),
-            Row(
-              children: [
-                Text(
-                  "Track order",
-                  style: trackOrderGreen,
+            Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () => print("tapped"),
+                splashColor: Colors.yellow[100],
+                child: Row(
+                  children: [
+                    Text(
+                      "Track order",
+                      style: trackOrderGreen,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 7.0),
+                      child: SvgPicture.asset("assets/images/Vector325.svg"),
+                    )
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 7.0),
-                  child: SvgPicture.asset("assets/images/Vector325.svg"),
-                )
-              ],
+              ),
             )
           ],
         ),
