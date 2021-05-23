@@ -3,6 +3,7 @@ import 'package:meelz/utils/style/styles.dart';
 
 Widget customButton(BuildContext context) {
   return Container(
+    height: 48,
     color: Colors.white,
     child: Padding(
       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
@@ -19,24 +20,21 @@ Widget customButton(BuildContext context) {
             ),
           ),
           onPressed: () {},
-          child: Padding(
-            padding: const EdgeInsets.all(10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(right: 6.0),
-                  child: Icon(
-                    Icons.thumb_up_outlined,
-                    color: Color(0xff68572D),
-                  ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(right: 6.0),
+                child: Icon(
+                  Icons.thumb_up_outlined,
+                  color: Color(0xff68572D),
                 ),
-                Text(
-                  'Rate this order',
-                  style: rateThisOrder,
-                ),
-              ],
-            ),
+              ),
+              Text(
+                'Rate this order',
+                style: rateThisOrder,
+              ),
+            ],
           ),
         ),
       ),

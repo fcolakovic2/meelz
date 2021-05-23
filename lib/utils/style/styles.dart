@@ -113,6 +113,21 @@ final TextStyle styleListItems = TextStyle(
   color: Color(0xff373737),
 );
 
+final TextStyle styleListItemsPom = TextStyle(
+  fontSize: 13,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  color: Color(0xff373737),
+);
+
+final TextStyle stylePriceBold = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta",
+  fontWeight: FontWeight.bold,
+  fontStyle: FontStyle.normal,
+  color: Color(0xff373737),
+);
+
 final TextStyle styleListItemsBold = TextStyle(
   fontSize: 16,
   fontFamily: "Averta",
@@ -129,6 +144,37 @@ BoxDecoration listBorder() {
         color: Color(0xFFEEEEEE),
       ),
     ),
+  );
+}
+
+BoxDecoration listBorderUp() {
+  return BoxDecoration(
+    border: Border(
+      top: BorderSide(
+        width: 1.0,
+        color: Color(0xFFEEEEEE),
+      ),
+    ),
+  );
+}
+
+BoxDecoration buildBoxDecoration() {
+  return BoxDecoration(
+    color: Colors.white,
+    borderRadius: BorderRadius.only(
+      topLeft: Radius.circular(16),
+      topRight: Radius.circular(16),
+      bottomLeft: Radius.circular(16),
+      bottomRight: Radius.circular(16),
+    ),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withOpacity(0.05),
+        spreadRadius: 0,
+        blurRadius: 5,
+        offset: Offset(3.0, 3), // changes position of shadow
+      ),
+    ],
   );
 }
 

@@ -22,8 +22,6 @@ Row listLogic(leftElement, rightElement) {
                   child: InkWell(
                     splashColor: Colors.blue[100],
                     child: SvgPicture.asset("assets/images/Group2313.svg"),
-                    // ikona eksportovana
-                    //Image.asset('assets/images/Group.png'),
                     onTap: () {
                       print("tapped");
                     },
@@ -35,8 +33,6 @@ Row listLogic(leftElement, rightElement) {
               ? Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Container(
-                    // height: 26,
-                    // width: 26,
                     child: Material(
                       color: Colors.transparent,
                       child: InkWell(

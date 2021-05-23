@@ -56,21 +56,27 @@ List<Widget> widgetsList = [
 ];
 
 List<Widget> widgetsListDetails = [
-  ListView(
-    children: [
-      Padding(
-        padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
-        child: CustomCard(
-          "Order #22525",
-          productsDetails,
-          "AED 220",
-          "assets/images/Rectangle711.png",
-          "Shipped",
-          DateTime(2021, 1, 25, 13, 35),
-          DateTime(2021, 1, 12, 12, 34),
+  NotificationListener<OverscrollIndicatorNotification>(
+    // ignore: missing_return
+    onNotification: (overscroll) {
+      overscroll.disallowGlow();
+    },
+    child: ListView(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
+          child: CustomCard(
+            "Order #22525",
+            productsDetails,
+            "AED 220",
+            "assets/images/Rectangle711.png",
+            "Shipped",
+            DateTime(2021, 1, 25, 13, 35),
+            DateTime(2021, 1, 12, 12, 34),
+          ),
         ),
-      ),
-    ],
+      ],
+    ),
   ),
   Icon(Icons.car_rental),
 ];

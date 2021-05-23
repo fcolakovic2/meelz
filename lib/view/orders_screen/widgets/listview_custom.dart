@@ -20,7 +20,7 @@ NotificationListener<OverscrollIndicatorNotification> listViewCustomShipped(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 10.0),
+                      padding: const EdgeInsets.only(bottom: 10.0, left: 5),
                       child: cardsList[counter].orderDate.year !=
                                   DateTime.now().year ||
                               cardsList[counter].orderDate.month !=
@@ -58,7 +58,7 @@ NotificationListener<OverscrollIndicatorNotification> listViewCustomPending(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 10.0),
+                      padding: const EdgeInsets.only(bottom: 10.0, left: 5),
                       child: cardsList[counter].orderDate.year !=
                                   DateTime.now().year ||
                               cardsList[counter].orderDate.month !=
@@ -95,7 +95,7 @@ NotificationListener<OverscrollIndicatorNotification> listViewCustomAll(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(bottom: 10.0),
+                padding: const EdgeInsets.only(bottom: 10.0, left: 5),
                 child: cardsList[counter].orderDate.year !=
                             DateTime.now().year ||
                         cardsList[counter].orderDate.month !=
