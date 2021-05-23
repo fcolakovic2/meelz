@@ -1,7 +1,14 @@
+import 'dart:math';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/style/styles.dart';
-import 'package:meelz/view/card_custom/widgets/price_image.dart';
 import 'package:meelz/view/card_custom/widgets/title_subtitle_with_image.dart';
+
+String generateRandomString(int len) {
+  var r = Random();
+  const _chars = 'ABbCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+  return List.generate(len, (index) => _chars[r.nextInt(_chars.length)]).join();
+}
 
 class CardWithImage extends StatelessWidget {
   final String naslov;
@@ -51,7 +58,40 @@ class CardWithImage extends StatelessWidget {
               ),
               Column(
                 children: cardWithImageElement(),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "Track number: ",
+                          style: trackOrderLight,
+                        ),
+                        Text(
+                          generateRandomString(9),
+                          style: trackOrderDark,
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Track order",
+                          style: trackOrderGreen,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 7.0),
+                          child:
+                              SvgPicture.asset("assets/images/Vector325.svg"),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),

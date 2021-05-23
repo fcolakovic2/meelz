@@ -139,3 +139,24 @@ final TextStyle rateThisOrder = TextStyle(
   fontWeight: FontWeight.w500,
   color: Color(0xff68572D),
 );
+
+final TextStyle trackOrderLight = TextStyle(
+  fontSize: 13,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  color: Color(0xFF373737).withOpacity(0.6),
+);
+
+final TextStyle trackOrderDark = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  color: Color(0xFF373737),
+);
+
+final TextStyle trackOrderGreen = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta",
+  fontStyle: FontStyle.normal,
+  color: Color(0xFF1CBD8D),
+);
