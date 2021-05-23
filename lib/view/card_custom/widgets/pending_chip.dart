@@ -9,14 +9,19 @@ class PendingChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Chip(
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(6))),
-      backgroundColor:
-          status == "Pending" ? Color(0xffFFDF36) : Color(0xff47D7AC),
-      label: Text(
-        status,
-        style: status == "Pending" ? stilPending : stilShipped,
+    return Container(
+      decoration: decorationChip(status),
+      height: 22,
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+            child: Text(
+              status,
+              style: status == "Pending" ? stilPending : stilShipped,
+            ),
+          ),
+        ],
       ),
     );
   }

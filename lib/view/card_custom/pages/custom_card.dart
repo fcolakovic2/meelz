@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/services/custom_card_services.dart';
 import 'package:meelz/view/card_custom/widgets/card_with_image.dart';
 import 'package:meelz/view/card_custom/widgets/card_without_image.dart';
+import 'package:meelz/viewModel/custom_card_viewmodel.dart';
 
 // ignore: must_be_immutable
 class CustomCard extends StatefulWidget {
@@ -11,9 +11,9 @@ class CustomCard extends StatefulWidget {
 
   CustomCard(this.title, this.subTitleList, this.image, this.status,
       this.orderDate, this.deliveryDate) {
-    dateOrderStr = dateOrderService(orderDate);
-    deliveryDateStr = deliveryOrderService(deliveryDate);
-    cijena = calculateTotalPrice(subTitleList);
+    dateOrderStr = dateOrderServiceModel(orderDate);
+    deliveryDateStr = deliveryOrderServiceModel(deliveryDate);
+    cijena = calculateTotalPriceModel(subTitleList);
   }
 
   @override
@@ -24,8 +24,8 @@ class _CustomCardState extends State<CustomCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => changePage(widget.title, widget.status, widget.deliveryDate,
-          widget.cijena, widget.image, context),
+      onTap: () => changePageModel(widget.title, widget.status,
+          widget.deliveryDate, widget.cijena, widget.image, context),
       child: Center(
         child: Card(
           elevation: 0.0,

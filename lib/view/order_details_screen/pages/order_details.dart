@@ -4,6 +4,7 @@ import 'package:meelz/utils/dummy_data/dummy_data.dart';
 import 'package:meelz/view/order_details_screen/widgets/app_bar_custom.dart';
 import 'package:meelz/view/order_details_screen/widgets/customButton.dart';
 import 'package:meelz/view/order_details_screen/widgets/list_details.dart';
+import 'package:meelz/view/order_details_screen/widgets/widget_list_details.dart';
 import 'package:meelz/view/orders_screen/widgets/default_tabbar_custom.dart';
 
 // ignore: must_be_immutable

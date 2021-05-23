@@ -169,8 +169,8 @@ BoxDecoration buildBoxDecoration() {
     ),
     boxShadow: [
       BoxShadow(
-        color: Colors.grey.withOpacity(0.05),
-        spreadRadius: 0,
+        color: Colors.grey.withOpacity(0.08),
+        spreadRadius: 5,
         blurRadius: 5,
         offset: Offset(3.0, 3), // changes position of shadow
       ),
@@ -245,3 +245,21 @@ final TextStyle totalnoopacity = TextStyle(
   fontWeight: FontWeight.w400,
   color: Color(0xff373737),
 );
+
+BoxDecoration decorationChip(status) {
+  return BoxDecoration(
+    color: status == "Pending" ? Color(0xffFFDF36) : Color(0xff47D7AC),
+    borderRadius: BorderRadius.all(
+      Radius.circular(6),
+    ),
+  );
+}
+
+BoxDecoration decorationChipDelivery() {
+  return BoxDecoration(
+    color: Color(0xffF6F6F6),
+    borderRadius: BorderRadius.all(
+      Radius.circular(6),
+    ),
+  );
+}
