@@ -6,11 +6,12 @@ class UpperRowCard extends StatelessWidget {
     Key key,
     @required this.naslov,
     @required this.srcslike,
+    @required this.nazivRestorana,
   }) : super(key: key);
 
   final String naslov;
   final String srcslike;
-
+  final String nazivRestorana;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +32,10 @@ class UpperRowCard extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 8.0),
                     child: Image.asset(srcslike),
                   ),
-                  Text("Gekko & Co"),
+                  Text(
+                    nazivRestorana,
+                    style: cardRightTitleDetails,
+                  ),
                 ],
               ),
             ],

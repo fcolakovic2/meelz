@@ -32,7 +32,11 @@ class CardWithImage extends StatelessWidget {
         children: <Widget>[
           Column(
             children: [
-              UpperRowCard(naslov: naslov, srcslike: srcslike),
+              UpperRowCard(
+                naslov: naslov,
+                srcslike: srcslike,
+                nazivRestorana: "Gekko & Co",
+              ),
               Column(
                 children: cardWithImageElement(subTitleList),
               ),
