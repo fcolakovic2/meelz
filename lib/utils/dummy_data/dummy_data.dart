@@ -21,7 +21,6 @@ List<CustomCard> cardsList = [
   CustomCard(
     "Order #13424",
     productsDetails,
-    "AED 150",
     "",
     "Pending",
     DateTime.now(),
@@ -32,7 +31,6 @@ List<CustomCard> cardsList = [
   CustomCard(
     "Order #32324",
     productsDetails,
-    "AED 250",
     "",
     "Shipped",
     DateTime(2021, 1, 25, 12, 34),
@@ -41,7 +39,6 @@ List<CustomCard> cardsList = [
   CustomCard(
     "Order #22525",
     productsDetails,
-    "AED 220",
     "",
     "Shipped",
     DateTime(2021, 1, 25, 13, 35),
@@ -76,7 +73,6 @@ List<Widget> widgetsListDetails(title) {
             child: CustomCard(
                 pom.title,
                 pom.subTitleList,
-                pom.cijena,
                 "assets/images/Vector.png",
                 pom.status,
                 pom.orderDate,
