@@ -19,7 +19,7 @@ List<String> listDetailsLeft = [
 
 List<CustomCard> cardsList = [
   CustomCard(
-    "Orders #13424",
+    "Order #13424",
     productsDetails,
     "AED 150",
     "",
@@ -53,35 +53,41 @@ List<Widget> widgetsList = [
   listViewCustom(cardsList),
   listViewCustom(cardsList, "Pending"),
   listViewCustom(cardsList, "Shipped"),
-  // listViewCustomPending(cardsList),
-  // listViewCustomShipped(cardsList),
 ];
 
-List<Widget> widgetsListDetails = [
-  NotificationListener<OverscrollIndicatorNotification>(
-    // ignore: missing_return
-    onNotification: (overscroll) {
-      overscroll.disallowGlow();
-    },
-    child: ListView(
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
-          child: CustomCard(
-            "Order #22525",
-            productsDetails,
-            "AED 220",
-            "assets/images/Rectangle711.png",
-            "Shipped",
-            DateTime(2021, 1, 25, 13, 35),
-            DateTime(2021, 1, 12, 12, 34),
+List<Widget> widgetsListDetails(title) {
+  CustomCard pom;
+  for (var i = 0; i < cardsList.length; i++) {
+    if (cardsList[i].title == title) {
+      pom = cardsList[i];
+      break;
+    }
+  }
+  return [
+    NotificationListener<OverscrollIndicatorNotification>(
+      // ignore: missing_return
+      onNotification: (overscroll) {
+        overscroll.disallowGlow();
+      },
+      child: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
+            child: CustomCard(
+                pom.title,
+                pom.subTitleList,
+                pom.cijena,
+                "assets/images/Vector.png",
+                pom.status,
+                pom.orderDate,
+                pom.deliveryDate),
           ),
-        ),
-      ],
+        ],
+      ),
     ),
-  ),
-  Icon(Icons.car_rental),
-];
+    Icon(Icons.car_rental),
+  ];
+}
 
 var productsDetails = [
   {

@@ -28,7 +28,7 @@ class _OrderDetailsState extends State<OrderDetails> {
     return Scaffold(
       body: defaultTabBarCustom(
         tabListDetails,
-        widgetsListDetails,
+        widgetsListDetails(widget.title),
         appBarCustom2(widget.deliveryDateStrTitle),
         detailsWidget(context),
       ),
