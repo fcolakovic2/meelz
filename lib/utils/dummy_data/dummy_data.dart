@@ -50,9 +50,11 @@ List<CustomCard> cardsList = [
 ];
 
 List<Widget> widgetsList = [
-  listViewCustomAll(cardsList),
-  listViewCustomPending(cardsList),
-  listViewCustomShipped(cardsList),
+  listViewCustom(cardsList),
+  listViewCustom(cardsList, "Pending"),
+  listViewCustom(cardsList, "Shipped"),
+  // listViewCustomPending(cardsList),
+  // listViewCustomShipped(cardsList),
 ];
 
 List<Widget> widgetsListDetails = [
