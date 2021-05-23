@@ -9,22 +9,25 @@ class DeliveryDateChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Chip(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(6),
-        ),
+    return Container(
+      decoration: decorationChipDelivery(),
+      height: 22,
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+            child: date.isBefore(DateTime.now())
+                ? Text(
+                    "Delivered $dateStr",
+                    style: stilDelivery,
+                  )
+                : Text(
+                    "$dateStr delivery",
+                    style: stilDelivery,
+                  ),
+          ),
+        ],
       ),
-      backgroundColor: Color(0xffF6F6F6),
-      label: date.isBefore(DateTime.now())
-          ? Text(
-              "Delivered $dateStr",
-              style: stilDelivery,
-            )
-          : Text(
-              "$dateStr delivery",
-              style: stilDelivery,
-            ),
     );
   }
 }
