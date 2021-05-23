@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/payment_card.dart';
 import 'package:meelz/view/card_custom/pages/custom_card.dart';
 import 'package:meelz/view/orders_screen/widgets/listview_custom.dart';
 
@@ -81,7 +82,12 @@ List<Widget> widgetsListDetails(title) {
         ],
       ),
     ),
-    Icon(Icons.car_rental),
+    ListView(children: [
+      Padding(
+        padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
+        child: PaymentKartica(),
+      ),
+    ]),
   ];
 }
 

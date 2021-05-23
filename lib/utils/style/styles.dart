@@ -206,3 +206,42 @@ final TextStyle trackOrderGreen = TextStyle(
   fontStyle: FontStyle.normal,
   color: Color(0xFF1CBD8D),
 );
+final TextStyle stilNaslovaPaymenta = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.bold,
+  color: Color(0xff373737),
+);
+
+final TextStyle stilVisa = TextStyle(
+  fontSize: 13,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.normal,
+  color: Color(0xff373737),
+);
+
+final TextStyle orderDelVAT = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  color: Color(0xff373737).withOpacity(0.7),
+);
+
+final TextStyle total = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.bold,
+  color: Color(0xff373737),
+);
+
+final TextStyle totalnoopacity = TextStyle(
+  fontSize: 14,
+  fontFamily: "Averta CY",
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  color: Color(0xff373737),
+);
