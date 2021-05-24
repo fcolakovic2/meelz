@@ -30,7 +30,11 @@ NotificationListener<OverscrollIndicatorNotification> listViewCustom(cardsList,
                               "TODAY AT ${DateFormat('kk:mm').format(cardsList[counter].orderDate)}",
                               style: stilDatuma),
                     ),
-                    cardsList[counter],
+                    counter == cardsList.length - 1
+                        ? Padding(
+                            padding: const EdgeInsets.only(bottom: 25),
+                            child: cardsList[counter])
+                        : cardsList[counter],
                   ],
                 ),
               )

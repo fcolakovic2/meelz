@@ -12,16 +12,20 @@ class PendingChip extends StatelessWidget {
     return Container(
       decoration: decorationChip(status),
       height: 22,
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-            child: Text(
-              status,
-              style: status == "Pending" ? stilPending : stilShipped,
+      width: 67,
+      child: FittedBox(
+        fit: BoxFit.fitWidth,
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Text(
+                status,
+                style: status == "Pending" ? stilPending : stilShipped,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

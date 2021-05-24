@@ -12,21 +12,25 @@ class DeliveryDateChip extends StatelessWidget {
     return Container(
       decoration: decorationChipDelivery(),
       height: 22,
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-            child: date.isBefore(DateTime.now())
-                ? Text(
-                    "Delivered $dateStr",
-                    style: stilDelivery,
-                  )
-                : Text(
-                    "$dateStr delivery",
-                    style: stilDelivery,
-                  ),
-          ),
-        ],
+      width: 101,
+      child: FittedBox(
+        fit: BoxFit.fitWidth,
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: date.isBefore(DateTime.now())
+                  ? Text(
+                      "Delivered $dateStr",
+                      style: stilDelivery,
+                    )
+                  : Text(
+                      "$dateStr delivery",
+                      style: stilDelivery,
+                    ),
+            ),
+          ],
+        ),
       ),
     );
   }

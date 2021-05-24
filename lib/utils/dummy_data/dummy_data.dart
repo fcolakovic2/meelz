@@ -44,6 +44,22 @@ List<CustomCard> cardsList = [
     DateTime(2021, 1, 25, 13, 35),
     DateTime(2021, 1, 12, 12, 34),
   ),
+  CustomCard(
+    "Order #22525",
+    productsDetails,
+    "",
+    "Shipped",
+    DateTime(2021, 1, 25, 13, 35),
+    DateTime(2021, 1, 12, 12, 34),
+  ),
+  CustomCard(
+    "Order #22525",
+    productsDetails,
+    "",
+    "Shipped",
+    DateTime(2021, 1, 25, 13, 35),
+    DateTime(2021, 1, 12, 12, 34),
+  ),
 ];
 
 List<Widget> widgetsList = [
@@ -57,7 +73,7 @@ var productsDetails = [
     'title': 'Meat Lovers',
     'description': 'BlenderMix system for ultra-fine blen sadasd',
     'quantity': '2',
-    'price': '50',
+    'price': '500',
     'img': 'assets/images/Rectangle711.png'
   },
   {

@@ -11,9 +11,15 @@ class PriceWithoutImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      cijena,
-      style: stilCijene,
+    return Container(
+      width: 65,
+      child: FittedBox(
+        fit: BoxFit.fitWidth,
+        child: Text(
+          cijena,
+          style: stilCijene,
+        ),
+      ),
     );
   }
 }

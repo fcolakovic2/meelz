@@ -15,7 +15,11 @@ AppBar appBarCustom2(text) {
           child: IconBack(),
         ),
         Container(
-          child: Text(text, style: stilNaslovaAppBar),
+          width: 244,
+          child: FittedBox(
+            fit: BoxFit.fitWidth,
+            child: Text(text, style: stilNaslovaAppBar),
+          ),
         ),
         Container(
           width: 20,
