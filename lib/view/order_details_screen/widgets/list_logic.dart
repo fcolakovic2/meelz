@@ -7,47 +7,44 @@ Row listLogic(leftElement, rightElement) {
   return Row(
     children: [
       OrderScreensViewModel().deliveryOrReceiptModel(leftElement)
-          ? Text(
-              rightElement,
-              style: styleListItems,
-            )
-          : Container(),
-      !OrderScreensViewModel().checkIfItsNotPaymentReceiptModel(leftElement)
-          ? Padding(
-              padding: const EdgeInsets.only(left: 14.0),
-              child: Container(
-                child: Material(
-                  color: Colors.transparent,
-                  child: InkWell(
-                    splashColor: Colors.yellow[100],
-                    child: SvgPicture.asset("assets/images/Group2313.svg"),
-                    onTap: () {
-                      print("tapped");
-                    },
-                  ),
+          ? Material(
+              color: Colors.transparent,
+              child: new InkWell(
+                splashColor: Colors.orange[100],
+                onTap: () {
+                  print("tapped");
+                },
+                child: Row(
+                  children: [
+                    new Container(
+                      height: 40,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            rightElement,
+                            style: styleListItems,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 14.0),
+                      child: Container(
+                        child: OrderScreensViewModel()
+                                .checkIfItsNotPaymentReceiptModel(leftElement)
+                            ? SvgPicture.asset("assets/images/Vectornew.svg")
+                            : SvgPicture.asset("assets/images/Group2313.svg"),
+                      ),
+                    )
+                  ],
                 ),
               ),
             )
-          : OrderScreensViewModel().checkIfItsDeliveryModel(leftElement)
-              ? Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
-                  child: Container(
-                    child: Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        splashColor: Colors.yellow[100],
-                        child: SvgPicture.asset("assets/images/Vectornew.svg"),
-                        onTap: () {
-                          print("tapped");
-                        },
-                      ),
-                    ),
-                  ),
-                )
-              : Text(
-                  rightElement,
-                  style: styleListItems,
-                ),
+          : Text(
+              rightElement,
+              style: styleListItems,
+            ),
     ],
   );
 }

@@ -29,18 +29,15 @@ Widget tabBarSlider(context, ordersList, widgetsList, [widgetsBefore]) {
             child: widgetsBefore,
           ),
           tabBarReusable(ordersList),
-          SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 0.0, right: 0.0),
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.8,
-                child: TabBarView(
-                  physics: BouncingScrollPhysics(),
-                  children: List<Widget>.generate(
-                    widgetsList.length,
-                    (counter) => widgetsList[counter],
-                  ),
+          Padding(
+            padding: const EdgeInsets.only(left: 0.0, right: 0.0),
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.8,
+              child: TabBarView(
+                physics: BouncingScrollPhysics(),
+                children: List<Widget>.generate(
+                  widgetsList.length,
+                  (counter) => widgetsList[counter],
                 ),
               ),
             ),

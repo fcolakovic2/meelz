@@ -28,7 +28,9 @@ class ListDetails extends StatelessWidget {
         children: List<Widget>.generate(
           attributes.length,
           (counter) => Padding(
-            padding: const EdgeInsets.only(bottom: 18.0),
+            padding: counter == 1 || counter == 4
+                ? const EdgeInsets.only(bottom: 5.0)
+                : const EdgeInsets.only(bottom: 18.0),
             child:
                 listDetailsRow(listDetailsLeft[counter], attributes[counter]),
           ),
