@@ -32,11 +32,17 @@ List<Widget> widgetsListDetails(title) {
         ],
       ),
     ),
-    ListView(children: [
-      Padding(
-        padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
-        child: PaymentKartica(),
-      ),
-    ]),
+    NotificationListener<OverscrollIndicatorNotification>(
+      // ignore: missing_return
+      onNotification: (overscroll) {
+        overscroll.disallowGlow();
+      },
+      child: ListView(children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
+          child: PaymentKartica(),
+        ),
+      ]),
+    ),
   ];
 }
