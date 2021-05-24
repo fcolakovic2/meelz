@@ -50,6 +50,7 @@ class BottomRowCard extends StatelessWidget {
                   children: [
                     Container(
                       width: 73,
+                      height: 40,
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
