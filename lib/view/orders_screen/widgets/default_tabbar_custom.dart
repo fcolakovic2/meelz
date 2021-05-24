@@ -32,7 +32,12 @@ Widget tabBarSlider(context, ordersList, widgetsList, [widgetsBefore]) {
           Padding(
             padding: const EdgeInsets.only(left: 0.0, right: 0.0),
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.8,
+              height: widgetsBefore == null
+                  ? MediaQuery.of(context).size.height -
+                      AppBar().preferredSize.height -
+                      MediaQuery.of(context).padding.top -
+                      81
+                  : MediaQuery.of(context).size.height * 0.8,
               child: TabBarView(
                 physics: BouncingScrollPhysics(),
                 children: List<Widget>.generate(
