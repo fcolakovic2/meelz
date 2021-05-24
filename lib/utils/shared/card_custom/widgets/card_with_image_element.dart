@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/view/card_custom/widgets/generating_rows.dart';
+import 'package:meelz/utils/shared/card_custom/widgets/generating_rows.dart';
 
 List<Widget> cardWithImageElement(subTitleList) {
   return List<Widget>.generate(

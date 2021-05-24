@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meelz/view/card_custom/widgets/card_with_image.dart';
-import 'package:meelz/view/card_custom/widgets/card_without_image.dart';
+import 'package:meelz/utils/shared/card_custom/widgets/card_with_image.dart';
+import 'package:meelz/utils/shared/card_custom/widgets/card_without_image.dart';
 import 'package:meelz/viewModel/custom_card_viewmodel.dart';
 
 // ignore: must_be_immutable
