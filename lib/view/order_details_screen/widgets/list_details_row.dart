@@ -12,7 +12,9 @@ Container listDetailsRow(leftElement, rightElement) {
             ? listBorder()
             : BoxDecoration(),
     child: Padding(
-      padding: const EdgeInsets.only(bottom: 18.0),
+      padding: OrderScreensService().checkIfItsDelivery(leftElement)
+          ? const EdgeInsets.only(bottom: 5.0, top: 0)
+          : const EdgeInsets.only(bottom: 18.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

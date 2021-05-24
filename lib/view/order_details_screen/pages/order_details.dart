@@ -29,6 +29,7 @@ class _OrderDetailsState extends State<OrderDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: defaultTabBarCustom(
+        context,
         tabListDetails,
         widgetsListDetails(widget.title),
         appBarCustom2(widget.deliveryDateStrTitle),
@@ -42,7 +43,6 @@ class _OrderDetailsState extends State<OrderDetails> {
       children: [
         Container(
           color: Colors.white,
-          height: MediaQuery.of(context).size.height * 0.46,
           child: ListDetails(widget.title, widget.status, widget.cijena,
               widget.deliveryDateStr),
         ),
