@@ -24,19 +24,13 @@ class ListDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 38.0),
-      child: NotificationListener<OverscrollIndicatorNotification>(
-        // ignore: missing_return
-        onNotification: (overscroll) {
-          overscroll.disallowGlow();
-        },
-        child: ListView(
-          children: List<Widget>.generate(
-            attributes.length,
-            (counter) => Padding(
-              padding: const EdgeInsets.only(bottom: 18.0),
-              child:
-                  listDetailsRow(listDetailsLeft[counter], attributes[counter]),
-            ),
+      child: Column(
+        children: List<Widget>.generate(
+          attributes.length,
+          (counter) => Padding(
+            padding: const EdgeInsets.only(bottom: 18.0),
+            child:
+                listDetailsRow(listDetailsLeft[counter], attributes[counter]),
           ),
         ),
       ),

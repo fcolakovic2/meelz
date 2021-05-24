@@ -19,13 +19,25 @@ class BottomRowCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(
-                  "Track number: ",
-                  style: trackOrderLight,
+                Container(
+                  width: 86,
+                  child: FittedBox(
+                    fit: BoxFit.fitWidth,
+                    child: Text(
+                      "Track number: ",
+                      style: trackOrderLight,
+                    ),
+                  ),
                 ),
-                Text(
-                  GenerateStringViewModel().generateRandomStringModel(9),
-                  style: trackOrderDark,
+                Container(
+                  width: 74,
+                  child: FittedBox(
+                    fit: BoxFit.fitWidth,
+                    child: Text(
+                      GenerateStringViewModel().generateRandomStringModel(9),
+                      style: trackOrderDark,
+                    ),
+                  ),
                 )
               ],
             ),
@@ -36,9 +48,15 @@ class BottomRowCard extends StatelessWidget {
                 splashColor: Colors.yellow[100],
                 child: Row(
                   children: [
-                    Text(
-                      "Track order",
-                      style: trackOrderGreen,
+                    Container(
+                      width: 73,
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          "Track order",
+                          style: trackOrderGreen,
+                        ),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 7.0),
