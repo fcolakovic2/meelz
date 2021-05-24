@@ -11,7 +11,7 @@ class PaymentKartica extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: buildBoxDecoration(),
+      // decoration: buildBoxDecoration(),
       child: Card(
         elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
