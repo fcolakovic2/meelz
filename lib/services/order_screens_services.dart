@@ -1,7 +1,7 @@
 import 'package:intl/intl.dart';
 import 'package:meelz/interface/order_details_interface.dart';
 
-class OrderDetailsService implements OrderDetailsInterface {
+class OrderScreensService implements OrderDetailsInterface {
   @override
   String deliveryDateFormat(deliveryDate) {
     return DateFormat('MMM ${deliveryDate.day}, yyyy').format(deliveryDate);
@@ -41,5 +41,11 @@ class OrderDetailsService implements OrderDetailsInterface {
   @override
   bool checkIfItsDelivery(leftElement) {
     return leftElement == "Delivery address";
+  }
+
+  @override
+  bool checkIfItsToday(cardListElement) {
+    return cardListElement.orderDate.year != DateTime.now().year ||
+        cardListElement.orderDate.month != DateTime.now().month;
   }
 }

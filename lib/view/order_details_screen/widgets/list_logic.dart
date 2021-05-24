@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meelz/utils/style/styles.dart';
-import 'package:meelz/viewModel/order_details_model.dart';
+import 'package:meelz/viewModel/order_screens_model.dart';
 
 Row listLogic(leftElement, rightElement) {
   return Row(
     children: [
-      OrderDetailsViewModel().deliveryOrReceiptModel(leftElement)
+      OrderScreensViewModel().deliveryOrReceiptModel(leftElement)
           ? Text(
               rightElement,
               style: styleListItems,
             )
           : Container(),
-      !OrderDetailsViewModel().checkIfItsNotPaymentReceiptModel(leftElement)
+      !OrderScreensViewModel().checkIfItsNotPaymentReceiptModel(leftElement)
           ? Padding(
               padding: const EdgeInsets.only(left: 14.0),
               child: Container(
@@ -28,7 +28,7 @@ Row listLogic(leftElement, rightElement) {
                 ),
               ),
             )
-          : OrderDetailsViewModel().checkIfItsDeliveryModel(leftElement)
+          : OrderScreensViewModel().checkIfItsDeliveryModel(leftElement)
               ? Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Container(
