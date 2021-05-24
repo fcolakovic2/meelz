@@ -1,3 +1,3 @@
-abstract class CustomCardInterface {
-  String generateRandomString(int len) {}
+abstract class GenerateRandomInterface {
+  String generateRandomString(int len);
 }

@@ -18,11 +18,12 @@ AppBar appBarCustom2(text) {
           child: Text(text, style: stilNaslovaAppBar),
         ),
         Container(
-          child: IconButton(
-            icon: Icon(Icons.more_vert),
-            color: Colors.black,
-            onPressed: () {},
-          ),
+          width: 20,
+          // child: IconButton(
+          //   icon: Icon(Icons.more_vert),
+          //   color: Colors.black,
+          //   onPressed: () {},
+          // ),
         ),
       ],
     ),

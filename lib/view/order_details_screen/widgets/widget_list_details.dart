@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/dummy_data/dummy_data.dart';
-import 'package:meelz/view/card_custom/pages/custom_card.dart';
+import 'package:meelz/utils/shared/card_custom/pages/custom_card.dart';
 import 'package:meelz/view/order_details_screen/widgets/payment_card.dart';
 
 List<Widget> widgetsListDetails(title) {

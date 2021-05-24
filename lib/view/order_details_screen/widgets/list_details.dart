@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/dummy_data/dummy_data.dart';
 import 'package:meelz/view/order_details_screen/widgets/list_details_row.dart';
+import 'package:meelz/viewModel/order_details_model.dart';
 
 // ignore: must_be_immutable
 class ListDetails extends StatelessWidget {
@@ -8,7 +9,9 @@ class ListDetails extends StatelessWidget {
 
   ListDetails(title, status, cijena, deliveryDateStr) {
     attributes = [
-      status == "Pending" ? status = "Delivery expected" : status = "Delivered",
+      OrderDetailsViewModel().checkIfItsPendingModel(status)
+          ? status = "Delivery expected"
+          : status = "Delivered",
       title.split(" ")[1],
       "Home",
       deliveryDateStr,

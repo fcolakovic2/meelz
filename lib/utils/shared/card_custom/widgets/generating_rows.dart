@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meelz/utils/shared/card_custom/widgets/title_subtitle_with_image.dart';
 import 'package:meelz/utils/style/styles.dart';
-import 'package:meelz/view/card_custom/widgets/title_subtitle_with_image.dart';
 
 Widget helpingMethodGeneratingRows(subTitleListElement, [index]) {
   return Padding(

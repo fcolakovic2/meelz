@@ -24,7 +24,7 @@ class BottomRowCard extends StatelessWidget {
                   style: trackOrderLight,
                 ),
                 Text(
-                  generateRandomStringModel(9),
+                  GenerateStringViewModel().generateRandomStringModel(9),
                   style: trackOrderDark,
                 )
               ],
