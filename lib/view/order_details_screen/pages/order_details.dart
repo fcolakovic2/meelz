@@ -5,7 +5,7 @@ import 'package:meelz/view/order_details_screen/widgets/customButton.dart';
 import 'package:meelz/view/order_details_screen/widgets/list_details.dart';
 import 'package:meelz/view/order_details_screen/widgets/widget_list_details.dart';
 import 'package:meelz/view/orders_screen/widgets/default_tabbar_custom.dart';
-import 'package:meelz/viewModel/order_details_model.dart';
+import 'package:meelz/viewModel/order_screens_model.dart';
 
 // ignore: must_be_immutable
 class OrderDetails extends StatefulWidget {
@@ -14,9 +14,9 @@ class OrderDetails extends StatefulWidget {
 
   OrderDetails(this.title, this.status, this.deliveryDate, this.cijena) {
     deliveryDateStr =
-        OrderDetailsViewModel().deliveryDateFormatModel(deliveryDate);
+        OrderScreensViewModel().deliveryDateFormatModel(deliveryDate);
     deliveryDateStrTitle =
-        OrderDetailsViewModel().deliveryDateFormatHoursModel(deliveryDate);
+        OrderScreensViewModel().deliveryDateFormatHoursModel(deliveryDate);
     deliveryDateStrTitle = deliveryDateStr + " at " + deliveryDateStrTitle;
   }
 

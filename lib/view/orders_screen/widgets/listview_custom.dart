@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:meelz/utils/style/styles.dart';
+import 'package:meelz/viewModel/order_screens_model.dart';
 
 NotificationListener<OverscrollIndicatorNotification> listViewCustom(cardsList,
     [status]) {
@@ -21,10 +22,8 @@ NotificationListener<OverscrollIndicatorNotification> listViewCustom(cardsList,
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10.0, left: 5),
-                      child: cardsList[counter].orderDate.year !=
-                                  DateTime.now().year ||
-                              cardsList[counter].orderDate.month !=
-                                  DateTime.now().month
+                      child: OrderScreensViewModel()
+                              .checkIfItsTodayModel(cardsList[counter])
                           ? Text("${cardsList[counter].dateOrderStr}",
                               style: stilDatuma)
                           : Text(

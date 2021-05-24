@@ -14,4 +14,6 @@ abstract class OrderDetailsInterface {
   bool deliveryOrReceipt(leftElement);
 
   bool checkIfItsDelivery(leftElement);
+
+  bool checkIfItsToday(cardListElement);
 }
