@@ -6,6 +6,7 @@ Widget helpingMethodGeneratingRows(subTitleListElement, [index]) {
   return Padding(
     padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
     child: Container(
+      // height: MediaQuery.of(context).size.height * 0.17,
       decoration: index == null ? listBorder() : null,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(0, 15, 0, 20),
