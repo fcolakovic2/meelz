@@ -73,7 +73,7 @@ var productsDetails = [
     'title': 'Meat Lovers',
     'description': 'BlenderMix system for ultra-fine blen sadasd',
     'quantity': '2',
-    'price': '50',
+    'price': '500',
     'img': 'assets/images/Rectangle711.png'
   },
   {

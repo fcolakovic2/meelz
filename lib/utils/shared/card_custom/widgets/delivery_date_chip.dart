@@ -12,7 +12,7 @@ class DeliveryDateChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: decorationChipDelivery(),
-      height: 22,
+      height: ScreenUtil().setHeight(22),
       width: ScreenUtil().setWidth(101),
       child: FittedBox(
         fit: BoxFit.fitWidth,

@@ -14,7 +14,7 @@ class BottomRowCard extends StatelessWidget {
     return Container(
       decoration: listBorderUp(),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
+        padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -50,8 +50,8 @@ class BottomRowCard extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      width: 73,
-                      height: 40,
+                      width: ScreenUtil().setWidth(73),
+                      height: ScreenUtil().setHeight(40),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(

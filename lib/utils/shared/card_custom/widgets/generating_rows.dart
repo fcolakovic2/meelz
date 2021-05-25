@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meelz/utils/shared/card_custom/widgets/title_subtitle_with_image.dart';
 import 'package:meelz/utils/style/styles.dart';
 
@@ -17,8 +18,8 @@ Widget helpingMethodGeneratingRows(subTitleListElement, [index]) {
             Column(
               children: <Widget>[
                 Container(
-                  height: 50,
-                  width: 50,
+                  height: ScreenUtil().setHeight(50),
+                  width: ScreenUtil().setWidth(50),
                   child: Image.asset(subTitleListElement['img']),
                 ),
               ],
