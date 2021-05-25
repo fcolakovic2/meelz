@@ -16,7 +16,7 @@ class SubtitleWithoutImage extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(left: 20.0, bottom: 10.0),
-          child: SizedBox(
+          child: Container(
             width: 211,
             child: Text(
               podnaslov,

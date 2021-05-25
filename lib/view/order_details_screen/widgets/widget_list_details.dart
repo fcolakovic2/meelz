@@ -19,7 +19,7 @@ List<Widget> widgetsListDetails(title) {
         overscroll.disallowGlow();
       },
       child: ListView(
-        // physics: const NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),

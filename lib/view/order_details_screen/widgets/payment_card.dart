@@ -100,7 +100,7 @@ class PaymentKartica extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20.0, bottom: 30.0),
+              padding: const EdgeInsets.only(top: 0.0, bottom: 15.0),
               child: Divider(
                 thickness: 1,
                 indent: 26,

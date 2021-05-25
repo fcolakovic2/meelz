@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meelz/utils/style/styles.dart';
 import 'package:meelz/viewModel/generate_random_string.dart';
@@ -20,7 +21,7 @@ class BottomRowCard extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  width: 86,
+                  width: ScreenUtil().setWidth(86),
                   child: FittedBox(
                     fit: BoxFit.fitWidth,
                     child: Text(
@@ -30,7 +31,7 @@ class BottomRowCard extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: 74,
+                  width: ScreenUtil().setWidth(74),
                   child: FittedBox(
                     fit: BoxFit.fitWidth,
                     child: Text(
