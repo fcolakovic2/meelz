@@ -11,27 +11,43 @@ List<Widget> widgetsListDetails(title) {
       break;
     }
   }
+
   return [
-    Container(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            CustomCard(pom.title, pom.subTitleList, "assets/images/Vector.png",
-                pom.status, pom.orderDate, pom.deliveryDate),
-          ],
-        ),
+    NotificationListener<OverscrollIndicatorNotification>(
+      // ignore: missing_return
+      onNotification: (overscroll) {
+        overscroll.disallowGlow();
+      },
+      child: ListView(
+        // physics: const NeverScrollableScrollPhysics(),
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
+            child: CustomCard(
+                pom.title,
+                pom.subTitleList,
+                "assets/images/Vector.png",
+                pom.status,
+                pom.orderDate,
+                pom.deliveryDate),
+          ),
+        ],
       ),
     ),
-    Column(
-      // physics: const NeverScrollableScrollPhysics(),
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
-          child: PaymentKartica(),
-        ),
-      ],
+    NotificationListener<OverscrollIndicatorNotification>(
+      // ignore: missing_return
+      onNotification: (overscroll) {
+        overscroll.disallowGlow();
+      },
+      child: ListView(
+        physics: const NeverScrollableScrollPhysics(),
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
+            child: PaymentKartica(),
+          ),
+        ],
+      ),
     ),
   ];
 }

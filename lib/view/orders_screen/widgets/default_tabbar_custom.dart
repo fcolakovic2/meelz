@@ -17,6 +17,7 @@ DefaultTabController defaultTabBarCustom(context, tabList, widgetsList, appBar,
 
 Widget tabBarSlider(context, ordersList, widgetsList, [widgetsBefore]) {
   var _scrollController = ScrollController();
+
   _scrollController.addListener(() {
     if (_scrollController.position.pixels ==
         _scrollController.position.maxScrollExtent) {
@@ -33,6 +34,7 @@ Widget tabBarSlider(context, ordersList, widgetsList, [widgetsBefore]) {
       },
 
       child: ListView(
+        shrinkWrap: true,
         controller: _scrollController,
         children: [
           Container(
