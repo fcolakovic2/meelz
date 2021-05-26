@@ -15,11 +15,13 @@ class PriceImage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Column(children: <Widget>[
-            Text(
-              cijena,
-            ),
-          ]),
+          Column(
+            children: <Widget>[
+              Text(
+                cijena,
+              ),
+            ],
+          ),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meelz/utils/style/styles.dart';
 import 'package:meelz/viewModel/generate_random_string.dart';
@@ -13,14 +14,14 @@ class BottomRowCard extends StatelessWidget {
     return Container(
       decoration: listBorderUp(),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
+        padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: [
                 Container(
-                  width: 86,
+                  width: ScreenUtil().setWidth(86),
                   child: FittedBox(
                     fit: BoxFit.fitWidth,
                     child: Text(
@@ -30,7 +31,7 @@ class BottomRowCard extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: 74,
+                  width: ScreenUtil().setWidth(74),
                   child: FittedBox(
                     fit: BoxFit.fitWidth,
                     child: Text(
@@ -44,13 +45,16 @@ class BottomRowCard extends StatelessWidget {
             Material(
               color: Colors.transparent,
               child: InkWell(
+                customBorder: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 onTap: () => print("tapped"),
-                splashColor: Colors.yellow[100],
+                splashColor: Colors.orange[100],
                 child: Row(
                   children: [
                     Container(
-                      width: 73,
-                      height: 40,
+                      width: ScreenUtil().setWidth(73),
+                      height: ScreenUtil().setHeight(40),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(

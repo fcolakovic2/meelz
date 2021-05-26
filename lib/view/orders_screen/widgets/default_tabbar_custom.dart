@@ -47,7 +47,7 @@ Widget tabBarSlider(context, ordersList, widgetsList, [widgetsBefore]) {
                     AppBar().preferredSize.height -
                     MediaQuery.of(context).padding.top -
                     81
-                : MediaQuery.of(context).size.height * 0.8,
+                : MediaQuery.of(context).size.height * 0.9,
             child: TabBarView(
               physics: BouncingScrollPhysics(),
               children: List<Widget>.generate(

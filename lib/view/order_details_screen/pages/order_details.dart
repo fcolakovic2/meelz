@@ -32,7 +32,7 @@ class _OrderDetailsState extends State<OrderDetails> {
         context,
         tabListDetails,
         widgetsListDetails(widget.title),
-        appBarCustom2(widget.deliveryDateStrTitle),
+        appBarCustom2(context, widget.deliveryDateStrTitle),
         detailsWidget(context),
       ),
     );

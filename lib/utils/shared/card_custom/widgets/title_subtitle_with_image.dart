@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meelz/utils/style/styles.dart';
 
 class TitleSubtitleWithImage extends StatelessWidget {
@@ -33,7 +34,7 @@ class TitleSubtitleWithImage extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(bottom: 10.0),
           child: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.6,
+            width: ScreenUtil().setWidth(210),
             child: Text(
               subnaslov,
               softWrap: false,
@@ -44,7 +45,7 @@ class TitleSubtitleWithImage extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.6,
+          width: ScreenUtil().setWidth(210),
           child: kolicina != "1"
               ? Row(
                   children: [

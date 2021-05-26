@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meelz/utils/style/styles.dart';
 
 Widget customButton(BuildContext context) {
   return Container(
-    height: 48,
+    height: ScreenUtil().setWidth(48),
     color: Colors.white,
     child: Padding(
       padding: const EdgeInsets.only(left: 20.0, right: 20.0),

@@ -49,7 +49,7 @@ class PaymentKartica extends StatelessWidget {
               ),
             ]),
             Padding(
-              padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+              padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
               child: Divider(
                 thickness: 1,
                 indent: 26,
@@ -87,7 +87,7 @@ class PaymentKartica extends StatelessWidget {
             ),
             Padding(
               padding:
-                  const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 15.0),
+                  const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -100,7 +100,7 @@ class PaymentKartica extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20.0, bottom: 30.0),
+              padding: const EdgeInsets.only(top: 0.0, bottom: 10.0),
               child: Divider(
                 thickness: 1,
                 indent: 26,
@@ -110,7 +110,7 @@ class PaymentKartica extends StatelessWidget {
             ),
             Padding(
               padding:
-                  const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 25.0),
+                  const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[

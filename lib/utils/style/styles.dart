@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 TextStyle appBarText = TextStyle(
   fontWeight: FontWeight.w500,
@@ -10,7 +11,7 @@ TextStyle appBarText = TextStyle(
 TextStyle itemSlider = TextStyle(
   fontWeight: FontWeight.w500,
   fontFamily: "Inter",
-  fontSize: 14,
+  fontSize: 14.sp,
   letterSpacing: 0.5,
 );
 
@@ -27,7 +28,7 @@ BoxDecoration appBarBorder() {
 
 final TextStyle stilPending = TextStyle(
   fontFamily: "Inter",
-  fontSize: 12,
+  fontSize: 12.sp,
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
   color: Color(0xff68572D),
@@ -35,7 +36,7 @@ final TextStyle stilPending = TextStyle(
 
 final TextStyle stilShipped = TextStyle(
   fontFamily: "Inter",
-  fontSize: 12,
+  fontSize: 12.sp,
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
   color: Color(0xffffffff),
@@ -43,7 +44,7 @@ final TextStyle stilShipped = TextStyle(
 
 final TextStyle stilDelivery = TextStyle(
   fontFamily: "Inter",
-  fontSize: 12,
+  fontSize: 12.sp,
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
   color: Color(0xff373737),
@@ -51,7 +52,7 @@ final TextStyle stilDelivery = TextStyle(
 
 final TextStyle stilNaslova = TextStyle(
   fontFamily: "Inter",
-  fontSize: 16,
+  fontSize: 16.sp,
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
   color: Color(0xff373737),
@@ -59,14 +60,14 @@ final TextStyle stilNaslova = TextStyle(
 
 final TextStyle stilPodnaslova = TextStyle(
   fontFamily: "Inter",
-  fontSize: 14,
+  fontSize: 14.sp,
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
   color: Color(0xff373737).withOpacity(0.6),
 );
 
 final TextStyle stilCijene = TextStyle(
-  fontSize: 16,
+  fontSize: 16.sp,
   fontFamily: "Inter",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
@@ -74,7 +75,7 @@ final TextStyle stilCijene = TextStyle(
 );
 
 final TextStyle stilDatuma = TextStyle(
-  fontSize: 12,
+  fontSize: 12.sp,
   fontFamily: "Inter",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
@@ -82,7 +83,7 @@ final TextStyle stilDatuma = TextStyle(
 );
 
 final TextStyle stilNaslovaAppBar = TextStyle(
-  fontSize: 26,
+  fontSize: 26.sp,
   fontFamily: "Averta CY",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w700,
@@ -90,7 +91,7 @@ final TextStyle stilNaslovaAppBar = TextStyle(
 );
 
 final TextStyle cardLeftTitleDetails = TextStyle(
-  fontSize: 14,
+  fontSize: 14.sp,
   fontFamily: "Averta CY",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w700,
@@ -98,7 +99,7 @@ final TextStyle cardLeftTitleDetails = TextStyle(
 );
 
 final TextStyle cardRightTitleDetails = TextStyle(
-  fontSize: 14,
+  fontSize: 14.sp,
   fontFamily: "Averta",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w400,
@@ -106,7 +107,7 @@ final TextStyle cardRightTitleDetails = TextStyle(
 );
 
 final TextStyle styleListItems = TextStyle(
-  fontSize: 16,
+  fontSize: 16.sp,
   fontFamily: "Averta",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w400,
@@ -114,14 +115,14 @@ final TextStyle styleListItems = TextStyle(
 );
 
 final TextStyle styleListItemsPom = TextStyle(
-  fontSize: 13,
+  fontSize: 13.sp,
   fontFamily: "Averta",
   fontStyle: FontStyle.normal,
   color: Color(0xff373737),
 );
 
 final TextStyle stylePriceBold = TextStyle(
-  fontSize: 14,
+  fontSize: 14.sp,
   fontFamily: "Averta",
   fontWeight: FontWeight.bold,
   fontStyle: FontStyle.normal,
@@ -129,7 +130,7 @@ final TextStyle stylePriceBold = TextStyle(
 );
 
 final TextStyle styleListItemsBold = TextStyle(
-  fontSize: 16,
+  fontSize: 16.sp,
   fontFamily: "Averta",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w700,
@@ -179,7 +180,7 @@ BoxDecoration buildBoxDecoration() {
 }
 
 final TextStyle rateThisOrder = TextStyle(
-  fontSize: 16,
+  fontSize: 16.sp,
   fontFamily: "Inter",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w500,
@@ -187,27 +188,27 @@ final TextStyle rateThisOrder = TextStyle(
 );
 
 final TextStyle trackOrderLight = TextStyle(
-  fontSize: 13,
+  fontSize: 13.sp,
   fontFamily: "Averta",
   fontStyle: FontStyle.normal,
   color: Color(0xFF373737).withOpacity(0.6),
 );
 
 final TextStyle trackOrderDark = TextStyle(
-  fontSize: 14,
+  fontSize: 14.sp,
   fontFamily: "Averta",
   fontStyle: FontStyle.normal,
   color: Color(0xFF373737),
 );
 
 final TextStyle trackOrderGreen = TextStyle(
-  fontSize: 14,
+  fontSize: 14.sp,
   fontFamily: "Averta",
   fontStyle: FontStyle.normal,
   color: Color(0xFF1CBD8D),
 );
 final TextStyle stilNaslovaPaymenta = TextStyle(
-  fontSize: 14,
+  fontSize: 14.sp,
   fontFamily: "Averta CY",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.bold,
@@ -215,7 +216,7 @@ final TextStyle stilNaslovaPaymenta = TextStyle(
 );
 
 final TextStyle stilVisa = TextStyle(
-  fontSize: 13,
+  fontSize: 13.sp,
   fontFamily: "Averta CY",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.normal,
@@ -223,7 +224,7 @@ final TextStyle stilVisa = TextStyle(
 );
 
 final TextStyle orderDelVAT = TextStyle(
-  fontSize: 14,
+  fontSize: 14.sp,
   fontFamily: "Averta CY",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w400,
@@ -231,7 +232,7 @@ final TextStyle orderDelVAT = TextStyle(
 );
 
 final TextStyle total = TextStyle(
-  fontSize: 14,
+  fontSize: 14.sp,
   fontFamily: "Averta CY",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.bold,
@@ -239,7 +240,7 @@ final TextStyle total = TextStyle(
 );
 
 final TextStyle totalnoopacity = TextStyle(
-  fontSize: 14,
+  fontSize: 14.sp,
   fontFamily: "Averta CY",
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w400,
