@@ -19,20 +19,23 @@ Row listLogic(leftElement, rightElement) {
                 },
                 child: Row(
                   children: [
-                    new Container(
-                      height: 40,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            rightElement,
-                            style: styleListItems,
-                          ),
-                        ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5.0),
+                      child: new Container(
+                        height: 40,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              rightElement,
+                              style: styleListItems,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 14.0),
+                      padding: const EdgeInsets.only(left: 14.0, right: 5.0),
                       child: Container(
                         child: OrderScreensViewModel()
                                 .checkIfItsNotPaymentReceiptModel(leftElement)
