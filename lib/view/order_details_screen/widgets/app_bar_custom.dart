@@ -21,7 +21,7 @@ AppBar appBarCustom2(context, text) {
             fit: BoxFit.fitWidth,
             child: Text(
               text,
-              style: stilNaslovaAppBar,
+              style: appBarText,
             ),
           ),
         ),

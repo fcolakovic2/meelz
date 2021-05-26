@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:meelz/utils/style/styles.dart';
+import 'package:meelz/view/order_details_screen/widgets/divider_linija.dart';
+import 'package:meelz/view/order_details_screen/widgets/drugi_red_isplate.dart';
+import 'package:meelz/view/order_details_screen/widgets/prvi_red_isplate.dart';
+import 'package:meelz/view/order_details_screen/widgets/slika_payment.dart';
+import 'package:meelz/view/order_details_screen/widgets/tekstovi_cijena.dart';
+import 'package:meelz/view/order_details_screen/widgets/total_cijena.dart';
+import 'package:meelz/view/order_details_screen/widgets/treci_red_isplate.dart';
 
 class PaymentKartica extends StatelessWidget {
   final String naslov = "test";
@@ -18,107 +23,15 @@ class PaymentKartica extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Row(children: <Widget>[
-              Padding(
-                padding:
-                    const EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Row(
-                      children: [
-                        SvgPicture.asset("assets/images/Vectorpayment.svg"),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 28.0),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 8.0),
-                        child: Text(
-                          "Paid AED 1360",
-                          style: stilNaslovaPaymenta,
-                        ),
-                      ),
-                      Text("Visa ** 7948", style: stilVisa),
-                    ]),
-              ),
+              SlikaPaymentKartice(),
+              TekstoviCijena(),
             ]),
-            Padding(
-              padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-              child: Divider(
-                thickness: 1,
-                indent: 26,
-                endIndent: 21,
-                color: Color(0xFFEEEEEE),
-              ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 15.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(
-                    "Order summary",
-                    style: orderDelVAT,
-                  ),
-                  Text("AED 1550", style: totalnoopacity),
-                ],
-              ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 15.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(
-                    "Delivery",
-                    style: orderDelVAT,
-                  ),
-                  Text("AED 0", style: totalnoopacity),
-                ],
-              ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(
-                    "VAT 5%",
-                    style: orderDelVAT,
-                  ),
-                  Text("AED 20", style: totalnoopacity),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 0.0, bottom: 10.0),
-              child: Divider(
-                thickness: 1,
-                indent: 26,
-                endIndent: 21,
-                color: Color(0xFFEEEEEE),
-              ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text("Total", style: totalnoopacity),
-                  Text("AED 1530", style: total),
-                ],
-              ),
-            ),
+            DividerLinija(),
+            PrviRedIsplate(),
+            DrugiRedIsplate(),
+            TreciRedIsplate(),
+            DividerLinija(),
+            TotalCijena(),
           ],
         ),
       ),
