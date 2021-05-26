@@ -45,8 +45,11 @@ class BottomRowCard extends StatelessWidget {
             Material(
               color: Colors.transparent,
               child: InkWell(
+                customBorder: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 onTap: () => print("tapped"),
-                splashColor: Colors.yellow[100],
+                splashColor: Colors.orange[100],
                 child: Row(
                   children: [
                     Container(
