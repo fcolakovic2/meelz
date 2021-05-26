@@ -13,7 +13,7 @@ Widget customButton(BuildContext context) {
           style: ButtonStyle(
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16.0),
+                borderRadius: BorderRadius.circular(12.0),
               ),
             ),
             backgroundColor: MaterialStateProperty.all(

@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 TextStyle appBarText = TextStyle(
   fontWeight: FontWeight.w500,
   color: Color(0xff373737),
-  fontSize: 26,
+  fontSize: 26.sp,
   letterSpacing: -0.5,
 );
 

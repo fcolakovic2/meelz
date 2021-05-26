@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meelz/view/order_details_screen/widgets/icon_back.dart';
 import 'package:meelz/utils/style/styles.dart';
 
@@ -16,13 +15,10 @@ AppBar appBarCustom2(context, text) {
           child: IconBack(),
         ),
         Container(
-          width: ScreenUtil().setWidth(244),
-          child: FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Text(
-              text,
-              style: appBarText,
-            ),
+          // width: ScreenUtil().setWidth(244),
+          child: Text(
+            text,
+            style: appBarText,
           ),
         ),
         Container(
