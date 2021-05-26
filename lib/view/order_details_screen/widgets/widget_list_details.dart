@@ -15,10 +15,9 @@ List<Widget> widgetsListDetails(title) {
   return [
     ListViewFirst(pom),
     Column(
-      // physics: const NeverScrollableScrollPhysics(),
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
+          padding: const EdgeInsets.fromLTRB(20, 42, 20, 42),
           child: PaymentKartica(),
         ),
       ],
@@ -34,9 +33,6 @@ class ListViewFirst extends StatefulWidget {
 }
 
 class _ListViewFirstState extends State<ListViewFirst> {
-  var _scrollController2 = ScrollController();
-  bool pocetak = true;
-
   @override
   void initState() {
     super.initState();
@@ -44,30 +40,10 @@ class _ListViewFirstState extends State<ListViewFirst> {
 
   @override
   Widget build(BuildContext context) {
-    // _scrollController2.addListener(() {
-    //   pocetak = false;
-
-    //   setState(() {});
-    //   if (_scrollController2.position.pixels ==
-    //       _scrollController2.position.minScrollExtent) {
-    //     // Perform your task
-    //     pocetak = true;
-    //     kraj = false;
-    //     setState(() {
-    //       print(pocetak);
-    //     });
-    //   }
-    // });
-    return ListView(
-      controller: _scrollController2,
-      //  physics: NeverScrollableScrollPhysics(),
-      physics: NeverScrollableScrollPhysics(),
-      // !kraj && pocetak
-      //     ? NeverScrollableScrollPhysics()
-      // : AlwaysScrollableScrollPhysics(),
+    return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
+          padding: const EdgeInsets.fromLTRB(20, 42, 20, 42),
           child: CustomCard(
               widget.pom.title,
               widget.pom.subTitleList,
