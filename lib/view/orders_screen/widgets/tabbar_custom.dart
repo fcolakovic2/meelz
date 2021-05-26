@@ -44,7 +44,7 @@ class _TabBarCustomState extends State<TabBarCustom>
                 indicatorHeight: 3.0,
                 indicatorColor: Color(0xFFFFDF36),
               ),
-              labelPadding: const EdgeInsets.symmetric(vertical: 22.0),
+              labelPadding: EdgeInsets.symmetric(vertical: 0),
               tabs: List<Widget>.generate(
                 widget.lista.length,
                 (counter) => tabElement(widget.lista[counter]),
