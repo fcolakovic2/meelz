@@ -18,6 +18,7 @@ DefaultTabController defaultTabBarCustom(context, tabList, widgetsList, appBar,
   );
 }
 
+// ignore: must_be_immutable
 class TabBarSlider extends StatefulWidget {
   var contexta, ordersList, widgetsList, widgetsBefore;
   TabBarSlider(this.contexta, this.ordersList, this.widgetsList,

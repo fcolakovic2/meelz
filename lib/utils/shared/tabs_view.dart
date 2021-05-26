@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meelz/utils/shared/size_config.dart';
 
+// ignore: must_be_immutable
 class TabsView extends StatelessWidget {
   TabsView(
       {Key key,

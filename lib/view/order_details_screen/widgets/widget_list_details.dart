@@ -17,7 +17,7 @@ List<Widget> widgetsListDetails(title) {
     Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 42, 20, 42),
+          padding: const EdgeInsets.fromLTRB(20, 30, 20, 30),
           child: PaymentKartica(),
         ),
       ],
@@ -43,7 +43,7 @@ class _ListViewFirstState extends State<ListViewFirst> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 42, 20, 42),
+          padding: const EdgeInsets.fromLTRB(20, 30, 20, 30),
           child: CustomCard(
               widget.pom.title,
               widget.pom.subTitleList,
