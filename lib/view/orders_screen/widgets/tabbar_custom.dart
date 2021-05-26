@@ -13,7 +13,8 @@ class TabBarCustom extends StatefulWidget {
   _TabBarCustomState createState() => _TabBarCustomState();
 }
 
-class _TabBarCustomState extends State<TabBarCustom> {
+class _TabBarCustomState extends State<TabBarCustom>
+    with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();

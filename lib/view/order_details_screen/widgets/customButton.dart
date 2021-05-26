@@ -4,7 +4,7 @@ import 'package:meelz/utils/style/styles.dart';
 
 Widget customButton(BuildContext context) {
   return Container(
-    height: ScreenUtil().setWidth(48),
+    height: ScreenUtil().setHeight(48),
     color: Colors.white,
     child: Padding(
       padding: const EdgeInsets.only(left: 20.0, right: 20.0),

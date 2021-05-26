@@ -3,6 +3,7 @@ import 'package:meelz/utils/shared/card_custom/pages/custom_card.dart';
 import 'package:meelz/view/orders_screen/widgets/listview_custom.dart';
 
 int indexPage = 0;
+bool kraj = false;
 
 List<String> tabList = ["ALL ORDERS", "PENDING", "SHIPPED"];
 
