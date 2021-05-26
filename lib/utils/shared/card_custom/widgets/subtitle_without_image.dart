@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meelz/utils/style/styles.dart';
 
 class SubtitleWithoutImage extends StatelessWidget {
@@ -16,8 +17,8 @@ class SubtitleWithoutImage extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(left: 20.0, bottom: 10.0),
-          child: SizedBox(
-            width: 211,
+          child: Container(
+            width: ScreenUtil().setWidth(211),
             child: Text(
               podnaslov,
               softWrap: false,

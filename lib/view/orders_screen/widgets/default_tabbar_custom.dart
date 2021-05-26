@@ -16,6 +16,16 @@ DefaultTabController defaultTabBarCustom(context, tabList, widgetsList, appBar,
 }
 
 Widget tabBarSlider(context, ordersList, widgetsList, [widgetsBefore]) {
+  var _scrollController = ScrollController();
+
+  _scrollController.addListener(() {
+    if (_scrollController.position.pixels ==
+        _scrollController.position.maxScrollExtent) {
+      // Perform your task
+      print("kraj");
+    }
+  });
+
   return Container(
     child: NotificationListener<OverscrollIndicatorNotification>(
       // ignore: missing_return
@@ -24,26 +34,25 @@ Widget tabBarSlider(context, ordersList, widgetsList, [widgetsBefore]) {
       },
 
       child: ListView(
+        shrinkWrap: true,
+        controller: _scrollController,
         children: [
           Container(
             child: widgetsBefore,
           ),
           tabBarReusable(ordersList),
-          Padding(
-            padding: const EdgeInsets.only(left: 0.0, right: 0.0),
-            child: Container(
-              height: widgetsBefore == null
-                  ? MediaQuery.of(context).size.height -
-                      AppBar().preferredSize.height -
-                      MediaQuery.of(context).padding.top -
-                      81
-                  : MediaQuery.of(context).size.height * 0.8,
-              child: TabBarView(
-                physics: BouncingScrollPhysics(),
-                children: List<Widget>.generate(
-                  widgetsList.length,
-                  (counter) => widgetsList[counter],
-                ),
+          Container(
+            height: widgetsBefore == null
+                ? MediaQuery.of(context).size.height -
+                    AppBar().preferredSize.height -
+                    MediaQuery.of(context).padding.top -
+                    81
+                : MediaQuery.of(context).size.height * 0.9,
+            child: TabBarView(
+              physics: BouncingScrollPhysics(),
+              children: List<Widget>.generate(
+                widgetsList.length,
+                (counter) => widgetsList[counter],
               ),
             ),
           ),

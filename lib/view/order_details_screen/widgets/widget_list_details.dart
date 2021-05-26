@@ -11,6 +11,7 @@ List<Widget> widgetsListDetails(title) {
       break;
     }
   }
+
   return [
     NotificationListener<OverscrollIndicatorNotification>(
       // ignore: missing_return

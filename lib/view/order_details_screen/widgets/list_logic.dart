@@ -10,6 +10,9 @@ Row listLogic(leftElement, rightElement) {
           ? Material(
               color: Colors.transparent,
               child: new InkWell(
+                customBorder: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 splashColor: Colors.orange[100],
                 onTap: () {
                   print("tapped");
