@@ -5,7 +5,7 @@ Widget tabElement(text) {
   return Align(
     alignment: Alignment.centerLeft,
     child: Container(
-      padding: const EdgeInsets.only(right: 35),
+      padding: const EdgeInsets.only(right: 35, bottom: 20),
       child: Text(
         text,
         style: itemSlider,

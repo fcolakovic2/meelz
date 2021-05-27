@@ -13,41 +13,46 @@ List<Widget> widgetsListDetails(title) {
   }
 
   return [
-    NotificationListener<OverscrollIndicatorNotification>(
-      // ignore: missing_return
-      onNotification: (overscroll) {
-        overscroll.disallowGlow();
-      },
-      child: ListView(
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
-            child: CustomCard(
-                pom.title,
-                pom.subTitleList,
-                "assets/images/Vector.png",
-                pom.status,
-                pom.orderDate,
-                pom.deliveryDate),
-          ),
-        ],
-      ),
-    ),
-    NotificationListener<OverscrollIndicatorNotification>(
-      // ignore: missing_return
-      onNotification: (overscroll) {
-        overscroll.disallowGlow();
-      },
-      child: ListView(
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 30, 20, 45),
-            child: PaymentKartica(),
-          ),
-        ],
-      ),
+    ListViewFirst(pom),
+    Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 30, 20, 30),
+          child: PaymentKartica(),
+        ),
+      ],
     ),
   ];
+}
+
+class ListViewFirst extends StatefulWidget {
+  final CustomCard pom;
+  ListViewFirst(this.pom);
+  @override
+  _ListViewFirstState createState() => _ListViewFirstState();
+}
+
+class _ListViewFirstState extends State<ListViewFirst> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 30, 20, 30),
+          child: CustomCard(
+              widget.pom.title,
+              widget.pom.subTitleList,
+              "assets/images/Vector.png",
+              widget.pom.status,
+              widget.pom.orderDate,
+              widget.pom.deliveryDate),
+        ),
+      ],
+    );
+  }
 }

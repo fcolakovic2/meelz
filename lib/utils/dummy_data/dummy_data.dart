@@ -3,6 +3,7 @@ import 'package:meelz/utils/shared/card_custom/pages/custom_card.dart';
 import 'package:meelz/view/orders_screen/widgets/listview_custom.dart';
 
 int indexPage = 0;
+bool kraj = false;
 
 List<String> tabList = ["ALL ORDERS", "PENDING", "SHIPPED"];
 
@@ -34,22 +35,6 @@ List<CustomCard> cardsList = [
     "",
     "Shipped",
     DateTime(2021, 1, 25, 12, 34),
-    DateTime(2021, 1, 12, 12, 34),
-  ),
-  CustomCard(
-    "Order #22525",
-    productsDetails,
-    "",
-    "Shipped",
-    DateTime(2021, 1, 25, 13, 35),
-    DateTime(2021, 1, 12, 12, 34),
-  ),
-  CustomCard(
-    "Order #22525",
-    productsDetails,
-    "",
-    "Shipped",
-    DateTime(2021, 1, 25, 13, 35),
     DateTime(2021, 1, 12, 12, 34),
   ),
   CustomCard(

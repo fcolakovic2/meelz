@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:meelz/providers/page_index.dart';
 import 'package:meelz/view/orders_screen/widgets/tabbar_reusable.dart';
+import 'package:provider/provider.dart';
 
 DefaultTabController defaultTabBarCustom(context, tabList, widgetsList, appBar,
     [widgetsBefore]) {
@@ -9,55 +12,82 @@ DefaultTabController defaultTabBarCustom(context, tabList, widgetsList, appBar,
       appBar: appBar,
       backgroundColor: Colors.grey[150],
       body: SafeArea(
-        child: tabBarSlider(context, tabList, widgetsList, widgetsBefore),
+        child: TabBarSlider(context, tabList, widgetsList, widgetsBefore),
       ),
     ),
   );
 }
 
-Widget tabBarSlider(context, ordersList, widgetsList, [widgetsBefore]) {
+// ignore: must_be_immutable
+class TabBarSlider extends StatefulWidget {
+  var contexta, ordersList, widgetsList, widgetsBefore;
+  TabBarSlider(this.contexta, this.ordersList, this.widgetsList,
+      [this.widgetsBefore]);
+  @override
+  _TabBarSliderState createState() => _TabBarSliderState();
+}
+
+class _TabBarSliderState extends State<TabBarSlider> {
   var _scrollController = ScrollController();
+  // int index = 0;
 
-  _scrollController.addListener(() {
-    if (_scrollController.position.pixels ==
-        _scrollController.position.maxScrollExtent) {
-      // Perform your task
-      print("kraj");
-    }
-  });
+  @override
+  void initState() {
+    super.initState();
+  }
 
-  return Container(
-    child: NotificationListener<OverscrollIndicatorNotification>(
-      // ignore: missing_return
-      onNotification: (overscroll) {
-        overscroll.disallowGlow();
-      },
+  @override
+  Widget build(BuildContext context) {
+    var controllers = context.watch<PageIndexProvider>();
+    if (widget.widgetsBefore != null && controllers.pageIndex > 2)
+      controllers.changeIndex(0);
 
-      child: ListView(
-        shrinkWrap: true,
-        controller: _scrollController,
-        children: [
-          Container(
-            child: widgetsBefore,
-          ),
-          tabBarReusable(ordersList),
-          Container(
-            height: widgetsBefore == null
-                ? MediaQuery.of(context).size.height -
-                    AppBar().preferredSize.height -
-                    MediaQuery.of(context).padding.top -
-                    81
-                : MediaQuery.of(context).size.height * 0.9,
-            child: TabBarView(
-              physics: BouncingScrollPhysics(),
-              children: List<Widget>.generate(
-                widgetsList.length,
-                (counter) => widgetsList[counter],
-              ),
+    return Container(
+      child: NotificationListener<OverscrollIndicatorNotification>(
+        // ignore: missing_return
+        onNotification: (overscroll) {
+          overscroll.disallowGlow();
+        },
+        child: ListView(
+          physics: widget.widgetsBefore == null
+              ? NeverScrollableScrollPhysics()
+              : AlwaysScrollableScrollPhysics(),
+          shrinkWrap: true,
+          controller: _scrollController,
+          children: [
+            Container(
+              child: widget.widgetsBefore,
             ),
-          ),
-        ],
+            tabBarReusable(widget.ordersList),
+            widget.widgetsBefore == null
+                ? Container(
+                    height: widget.widgetsBefore == null
+                        ? MediaQuery.of(context).size.height -
+                            AppBar().preferredSize.height -
+                            MediaQuery.of(context).padding.top -
+                            120.sp
+                        : MediaQuery.of(context).size.height * 0.78,
+                    child: TabBarView(
+                      physics: BouncingScrollPhysics(),
+                      children: List<Widget>.generate(
+                        widget.widgetsList.length,
+                        (counter) => widget.widgetsList[counter],
+                      ),
+                    ),
+                  )
+                : Column(
+                    children: [
+                      Container(
+                        child: [
+                          widget.widgetsList[0],
+                          widget.widgetsList[1],
+                        ][controllers.pageIndex],
+                      ),
+                    ],
+                  ),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }

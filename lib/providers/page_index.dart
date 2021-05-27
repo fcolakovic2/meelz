@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PageIndexProvider extends ChangeNotifier {
-  int _pageIndex;
+  int _pageIndex = 0;
 
   int get pageIndex => _pageIndex;
 

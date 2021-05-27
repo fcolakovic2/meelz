@@ -14,7 +14,7 @@ class BottomRowCard extends StatelessWidget {
     return Container(
       decoration: listBorderUp(),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
+        padding: const EdgeInsets.fromLTRB(15, 10, 10, 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -52,19 +52,22 @@ class BottomRowCard extends StatelessWidget {
                 splashColor: Colors.orange[100],
                 child: Row(
                   children: [
-                    Container(
-                      width: ScreenUtil().setWidth(73),
-                      height: ScreenUtil().setHeight(40),
-                      child: FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text(
-                          "Track order",
-                          style: trackOrderGreen,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5.0, right: .0),
+                      child: Container(
+                        width: ScreenUtil().setWidth(73),
+                        height: ScreenUtil().setHeight(40),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            "Track order",
+                            style: trackOrderGreen,
+                          ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 7.0),
+                      padding: const EdgeInsets.only(left: 5.0, right: 5.0),
                       child: SvgPicture.asset("assets/images/Vector325.svg"),
                     )
                   ],

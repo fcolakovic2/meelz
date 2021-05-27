@@ -35,5 +35,3 @@ Container listDetailsRow(leftElement, rightElement) {
     ),
   );
 }
-
-checkIfItsStatusModel(leftElement) {}
