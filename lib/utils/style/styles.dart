@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 TextStyle appBarText = TextStyle(
@@ -262,5 +263,24 @@ BoxDecoration decorationChipDelivery() {
     borderRadius: BorderRadius.all(
       Radius.circular(6),
     ),
+  );
+}
+
+void setSystemUIOverlayStyle() {
+  return SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle.dark.copyWith(
+      statusBarColor: Colors.white,
+      statusBarIconBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.dark,
+    ), /* set Status bar icon color in iOS. */
+  );
+}
+
+ThemeData themeDataStyle() {
+  return ThemeData(
+    splashColor: Colors.transparent,
+    highlightColor: Colors.transparent,
+    fontFamily: 'Inter',
+    primarySwatch: Colors.blue,
   );
 }

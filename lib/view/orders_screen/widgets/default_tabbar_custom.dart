@@ -39,8 +39,8 @@ class _TabBarSliderState extends State<TabBarSlider> {
   @override
   Widget build(BuildContext context) {
     var controllers = context.watch<PageIndexProvider>();
-    if (widget.widgetsBefore != null) controllers.changeIndex(0);
-    print(controllers.pageIndex);
+    if (widget.widgetsBefore != null && controllers.pageIndex > 2)
+      controllers.changeIndex(0);
 
     return Container(
       child: NotificationListener<OverscrollIndicatorNotification>(

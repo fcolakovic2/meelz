@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:meelz/providers/page_index.dart';
+import 'package:meelz/utils/style/styles.dart';
 import 'package:meelz/view/orders_screen/pages/orders_screen.dart';
+import 'package:meelz/viewModel/get_providers_instances.dart';
+import 'package:meelz/viewModel/main_methods_viewmodel.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
     MultiProvider(
-      providers: [
-        ChangeNotifierProvider.value(value: PageIndexProvider()),
-      ],
+      providers:
+          GetProvidersInstancesViewModel().getProvidersInstancesViewModel(),
       child: MyApp(),
     ),
   );
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-
-  SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle.dark.copyWith(
-      statusBarColor: Colors.white,
-      statusBarIconBrightness: Brightness.dark,
-      statusBarBrightness: Brightness.dark,
-    ), /* set Status bar icon color in iOS. */
-  );
+  MainMethodsViewModel().preferredOrientationsViewModel();
+  setSystemUIOverlayStyle();
 }
 
 class MyApp extends StatelessWidget {
@@ -30,22 +23,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(393, 767),
+      designSize: MainMethodsViewModel().buildSizeViewModel(),
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        theme: ThemeData(
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          fontFamily: 'Inter',
-          primarySwatch: Colors.blue,
-        ),
+        theme: themeDataStyle(),
         builder: (context, widget) {
-          return MediaQuery(
-            //Setting font does not change with system font size
-            data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-            child: widget,
-          );
+          return MainMethodsViewModel().scaleTextViewModel(context, widget);
         },
         home: OrdersScreen(),
       ),
